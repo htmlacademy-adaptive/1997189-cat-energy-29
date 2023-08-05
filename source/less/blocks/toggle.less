@@ -1,0 +1,41 @@
+.toggle {
+  width: 24px;
+  height: 24px;
+  border: none;
+  position: relative;
+  padding: 0;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.toggle__for {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+}

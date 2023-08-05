@@ -1,0 +1,112 @@
+.program {
+  padding: 0 20px;
+}
+
+.program__list {
+  .zero-list-styles() ;
+  margin: 0 auto;
+}
+
+@media (min-width: @desktop-width) {
+  .program__list {
+    display: flex;
+  }
+}
+
+.program__caption,
+.program__description {
+  .zero-ph-styles();
+}
+
+.program__caption {
+  color: @black;
+  font-family: "Oswald Regular";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 37px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 29px;
+}
+
+.program__item {
+  background-color: @basic-grey;
+  padding: 30px 20px 18px 20px;
+
+  /*можно это сделать блоком? и на блок повесить релетив? или релатив нужно вешать на program__item*/
+  &--slim {
+    position: relative;
+  }
+
+  &--slim::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: @basic-green;
+    border-radius: 50%;
+    position: absolute;
+    top: 24px;
+    left: 24px;
+  }
+
+  &--slim::after {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 50px;
+    background-image: url("../img/cat-slim-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    z-index: 2;
+    top: 22px;
+    left: 29px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .program__item {
+    &--slim::before {
+      top: 50%;
+      left: 80%;
+    }
+
+    &--slim::after {
+      top: 50%;
+      left: 80%;
+    }
+  }
+}
+
+/*@media (min-width: @desktop-width) {
+   {
+    width: 1440px;
+    padding: 0 110px;
+  }
+}*/
+.program__description {
+  margin-bottom: 15px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #d9d9d9;
+    margin-top: 23px;
+  }
+}
+
+.program__link {
+  color: @black;
+  text-align: center;
+  font-family: "Oswald Regular";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+}

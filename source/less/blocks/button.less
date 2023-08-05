@@ -1,0 +1,23 @@
+.button {
+  color: #ffffff;
+  background-color: @basic-green;
+  text-align: center;
+  font-family: "Oswald Regular";
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.button__promo {
+  display: block;
+  text-decoration: none;
+  padding: 8px 8px;
+  font-size: 14px;
+  line-height: 18px; /* 0% */
+}
+
+@media (min-width: @tablet-width) {
+  .button__promo {
+    width: 192px;
+  }
+}

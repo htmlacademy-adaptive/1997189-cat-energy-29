@@ -1,0 +1,25 @@
+.nav-list {
+  color: @black;
+  display: none;
+  .zero-list-styles();
+}
+
+@media (min-width: @tablet-width) {
+  .nav-list--active {
+    display: flex;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .nav-list--green-theme {
+    background-color: @basic-green;
+  }
+}
+/*поставила дисплей инхерит на модификатор - верно ли?*/
+
+.nav-list__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*для нав лист прописать л" @медиа и модификатор  nav-list--active*/
