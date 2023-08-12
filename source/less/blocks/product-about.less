@@ -1,4 +1,36 @@
+.product-about {
+  padding: 0 20px;
+}
+
 .product-about__caption {
   .zero-ph-styles();
   margin-bottom: 40px;
+  color: #000000;
+  text-align: left;
+  font-family: "Oswald";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+
+@media (min-width: @tablet-width) {
+  .product-about {
+    padding: 0 30px;
+  }
+
+  .product-about__caption {
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product-about {
+    max-width: 1440px;
+    padding: 0 110px;
+  }
 }

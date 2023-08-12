@@ -1,25 +1,70 @@
 .nav-list {
-  color: @black;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
   display: none;
-  .zero-list-styles();
 }
 
+.nav-list__item {
+  border-top: 1px solid #e6e6e6;
+}
+
+.nav-list__link {
+  color: #000000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  display: block;
+  padding: 23px 10px 22px;
+  text-align: center;
+  text-decoration: none;
+}
+/*ставить видимость на модификатор? или на сам nav-list*/
 @media (min-width: @tablet-width) {
-  .nav-list--active {
+  .nav-list {
+    width: 461px;
     display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+  }
+
+  .nav-list__link {
+    color: #000000;
+    font-size: 18px;
+    line-height: 24px; /* 133.333% */
+    text-transform: uppercase;
+  }
+
+  .nav-list__item {
+    border-top: none;
+  }
+
+  .nav-list__item--current::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #68b738;
+    width: calc(100% - 20px);
+    margin: 0 auto;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .nav-list--green-theme {
-    background-color: @basic-green;
+  .nav-list {
+    width: 610px;
+  }
+
+  .nav-list__link {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  .nav-list__item--current::after {
+    background-color: #ffffff;
   }
 }
-/*поставила дисплей инхерит на модификатор - верно ли?*/
-
-.nav-list__link {
-  color: inherit;
-  text-decoration: none;
-}
-
-/*для нав лист прописать л" @медиа и модификатор  nav-list--active*/

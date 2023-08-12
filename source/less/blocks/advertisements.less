@@ -1,0 +1,33 @@
+.advertisements {
+  display: flex;
+  column-gap: 32px;
+  justify-content: space-between;
+}
+
+.advertisements__wrapper {
+  width: 124px;
+}
+
+.advertisements__item {
+  color: #000000;
+  text-align: center;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 37px;
+}
+
+.advertisements__description {
+  color: @dark-grey;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 100% */
+}
+
+@media (min-width: @tablet-width) {
+  .advertisements {
+    column-gap: 43px;
+  }
+}

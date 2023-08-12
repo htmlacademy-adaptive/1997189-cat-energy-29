@@ -3,14 +3,8 @@
 }
 
 .program__list {
-  .zero-list-styles() ;
+  .zero-list-styles();
   margin: 0 auto;
-}
-
-@media (min-width: @desktop-width) {
-  .program__list {
-    display: flex;
-  }
 }
 
 .program__caption,
@@ -20,73 +14,23 @@
 
 .program__caption {
   color: @black;
-  font-family: "Oswald Regular";
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 37px;
   text-transform: uppercase;
-  text-align: center;
   margin-bottom: 29px;
+  padding-left: 71px;
+  padding-right: 15px;
 }
 
-.program__item {
-  background-color: @basic-grey;
-  padding: 30px 20px 18px 20px;
-
-  /*можно это сделать блоком? и на блок повесить релетив? или релатив нужно вешать на program__item*/
-  &--slim {
-    position: relative;
-  }
-
-  &--slim::before {
-    content: "";
-    display: block;
-    width: 50px;
-    height: 50px;
-    background-color: @basic-green;
-    border-radius: 50%;
-    position: absolute;
-    top: 24px;
-    left: 24px;
-  }
-
-  &--slim::after {
-    content: "";
-    display: block;
-    width: 36px;
-    height: 50px;
-    background-image: url("../img/cat-slim-mobile.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    position: absolute;
-    z-index: 2;
-    top: 22px;
-    left: 29px;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .program__item {
-    &--slim::before {
-      top: 50%;
-      left: 80%;
-    }
-
-    &--slim::after {
-      top: 50%;
-      left: 80%;
-    }
-  }
-}
-
-/*@media (min-width: @desktop-width) {
-   {
-    width: 1440px;
-    padding: 0 110px;
-  }
-}*/
 .program__description {
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
   margin-bottom: 15px;
 
   &::after {
@@ -102,11 +46,174 @@
 .program__link {
   color: @black;
   text-align: center;
-  font-family: "Oswald Regular";
+  font-family: "Oswald";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 16px;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.program__item {
+  background-color: @basic-grey;
+  padding: 30px 20px 18px 20px;
+  margin-bottom: 20px;
+
+  /*можно это сделать блоком? и на блок повесить релетив? или релатив нужно вешать на program__item*/
+  &--pro,
+  &--slim {
+    position: relative;
+  }
+
+  &--pro::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: @basic-green;
+    border-radius: 50%;
+    position: absolute;
+    top: 28px;
+    left: 21px;
+  }
+
+  &--slim::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: @basic-green;
+    border-radius: 50%;
+    position: absolute;
+    top: 24px;
+    left: 20px;
+  }
+
+  &--slim::after {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 50px;
+    background-image: url("../img/cat-slim-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    z-index: 2;
+    top: 21px;
+    left: 27px;
+  }
+
+  &--pro::after {
+    content: "";
+    display: block;
+    width: 66px;
+    height: 50px;
+    background-image: url("../img/cat-pro-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    z-index: 2;
+    top: 28px;
+    left: 12px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .program {
+    padding: 0 30px;
+  }
+
+  .program__item {
+    &--pro::before {
+      width: 200px;
+      height: 200px;
+      /*top: 28px;
+      left: 458px;*/
+      top: 6%;
+      left: 68%;
+    }
+
+    &--slim::before {
+      width: 200px;
+      height: 200px;
+      /*top: 24px;
+      left: 458px;*/
+      top: 6%;
+      left: 68%;
+    }
+
+    &--slim::after {
+      width: 200px;
+      height: 200px;
+      background-image: url("../img/cat-slim-tablet.svg");
+      /*top: 21px;
+      left: 458px;*/
+      top: 6%;
+      left: 68%;
+    }
+
+    &--pro::after {
+      width: 269px;
+      height: 200px;
+      background-image: url("../img/cat-pro-tablet.svg");
+      /*top: 28px;
+      left: 420px;*/
+      top: 6%;
+      left: 61%;
+    }
+  }
+
+  .program__caption {
+    font-size: 36px;
+    line-height: 36px;
+    width: 340px;
+  }
+
+  .program__description {
+    width: 340px;
+    color: #000000;
+    font-size: 16px;
+    line-height: 24px;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program {
+    max-width: 1440px;
+    padding: 0 110px;
+  }
+
+  .program__list {
+    display: flex;
+    column-gap: 80px;
+    row-gap: 80px;
+  }
+
+  .program__item {
+    width: 570px;
+
+    &--slim::before,
+    &--pro::before {
+      width: 100px;
+      height: 100px;
+      left: 24px;
+    }
+
+    &--slim::after {
+      background-image: url("../img/cat-slim-desktop.svg");
+      top: -25px;
+      left: -20px;
+    }
+
+    &--pro::after {
+      background-image: url("../img/cat-pro-desktop.svg");
+      top: -25px;
+      left: -69px;
+    }
+  }
 }
