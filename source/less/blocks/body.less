@@ -3,16 +3,18 @@
   margin: 0 auto;
 }
 
-@media (min-width: @tablet-width) {
-  .body__header {
-    width: 768px;
-    padding: 0 30px;
-  }
+.body__footer {
+  margin: 0 auto;
 }
 
 @media (min-width: @desktop-width) {
   .body__header {
-    width: 1440px;
-    padding: 0 110px;
+    position: absolute;
+    width: 100%;
+    max-width: 1440px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
   }
 }

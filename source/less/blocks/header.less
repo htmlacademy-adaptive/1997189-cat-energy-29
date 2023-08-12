@@ -1,5 +1,30 @@
 .header {
-  display: flex;
-  justify-content: space-between;
-  padding: 13px 20px;
+  position: relative;
+  padding: 58px 0 6px 0;
+  background: url("../img/footer-logo 2.svg") no-repeat center 22px;
+}
+
+.header__logo {
+  position: absolute;
+  top: 12px;
+  left: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .header {
+    background: none;
+    width: 768px;
+    padding: 16px 20px;
+  }
+
+  .header-nav__list {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header {
+    /*width: 1440px;*/
+    /*padding: 52px 110px 52px 110px;*/
+  }
 }

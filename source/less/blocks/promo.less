@@ -1,82 +1,54 @@
-.promo {
-  display: flex;
-  flex-direction: column;
-}
-
-.promo__container {
-  position: relative;
-  padding: 27px 35px 27px 35px;
-  min-height: 302px;/*т.к. это высота картинки - кота фон*/
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    display: block;
-    background-image: url("../img/cat-background-mobile.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-  }
+.promo__wrapper {
+  display: grid;
+  /*position: relative;*/
+  padding: 27px 0 0 0; /* проверь 6 px! 27px 0 6px 0;*/
 
   &::after {
     content: "";
     display: block;
-    position: absolute;
-    background-color: rgba(104, 183, 56, 0.85);
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 270px;
+    /*высота картинки... убрать?*/
+    background-image: url("../img/can-mobile.png");
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 }
 
-@media (min-width: @tablet-width) {
-  .promo__container::before,
-  .promo__container::after {
-    display: none;
-  }
+.promo__button {
+  margin: 0 20px;
+  display: block;
+  grid-row: 4/5;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 8px;
 }
 
 .promo__heading {
-  .zero-ph-styles();
   color: #ffffff;
   text-align: center;
-  font-family: "Oswald Regular";
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: 400;
   line-height: 36px;
-  position: relative;
-  margin-bottom: 25px;
-  z-index: 2;
+  margin: 0 auto 25px;
+  min-height: 72px;
 }
 
 .promo__slogan {
   color: #ffffff;
-  font-family: "Oswald Regular";
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 14px; /* 100% */
+  line-height: 14px;
   text-transform: uppercase;
   text-align: center;
   position: relative;
   z-index: 2;
+  min-height: 42px;
   .zero-ph-styles();
-}
-
-.promo::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 270px; /*высота картинки... убрать?*/
-  background-image: url("../img/can-mobile.png");
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 .promo__button-wrapper {
@@ -84,16 +56,99 @@
   order: 2;
 }
 
+.promo--green-theme {
+  background-image: url(" ../img/cat-background-mobile.jpg"), linear-gradient(#64a83b 64.3%, #ffffff 64.7%);
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
 @media (min-width: @tablet-width) {
-  .promo__button-wrapper {
-    order: inherit;
+  .promo__container {
+    padding: 0 30px;
   }
 
-  .promo__heading,
+  .promo--green-theme {
+    background-image: none;
+  }
+
+  .promo__heading {
+    color: #000000;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    min-height: 136px;
+    margin: 0 0 25px 0;
+  }
+
   .promo__slogan {
-    color: @black;
+    color: #000000;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+  }
+
+  .promo__wrapper {
+    position: static;
+    padding: 38px 58px 20px 119px;
+  }
+
+  .promo__wrapper::after {
+    background-image: url("../img/can-tablet.png");
+    min-height: 609px;
+    background-position: left -89px top 13px;
+    grid-column: 1/-1;
+    grid-row: 3/5;
+    margin: 0 auto;
+  }
+
+  .promo__button {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    margin: 28px 0 0 0;
+    padding: 16px 10px;
+    width: 245px;
+    font-size: 20px;
+    line-height: 20px;
+    align-self: flex-start;
+    z-index: 1;
   }
 }
 
+@media (min-width: @desktop-width) {
+  .promo__wrapper {
+    grid-template-columns: 511px 522px;
+    grid-template-rows: 50px auto;
+    max-width: 1440px;
+    padding: 130px 110px 0 110px;
+    margin: 0 auto;
+  }
 
-/*Какая ошибка в фонт фэмили?*/
+  .promo__wrapper::after {
+    background-image: url("../img/can-desktop.png");
+    grid-column: 2/3;
+    grid-row: 1/5;
+  }
+
+  .promo__heading {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .promo__slogan {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  .promo__button {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+
+  .promo--green-theme {
+    background-image: url(" ../img/cat-background-desktop.jpg"), linear-gradient(90deg, #ffffff 50%, #64a83b 50%);
+    background-size: 720px 696px, 100%;
+    background-position: calc(50% + 360px) center, center;
+    /*background-position: right center;*/
+    background-repeat: no-repeat;
+  }
+}
