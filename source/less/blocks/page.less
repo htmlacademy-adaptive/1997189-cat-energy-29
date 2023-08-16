@@ -16,4 +16,15 @@
   .page__body {
     position: relative;
   }
+
+  .page__body::before {
+    content: "";
+    width: 50%;
+    background-color: #64a73c;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
 }

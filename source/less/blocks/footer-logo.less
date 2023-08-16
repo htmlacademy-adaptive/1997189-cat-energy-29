@@ -2,11 +2,25 @@
   display: flex;
   justify-content: center;
   align-items: start;
+  padding-bottom: 19px;
+}
+
+@media (min-width: @tablet-width) {
+  .footer-logo {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-bottom: 19px;
+    padding-top: 17px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .footer__logo,
   .footer__socials {
     border: none;
+  }
+
+  .footer-logo {
+    justify-content: flex-start;
   }
 }

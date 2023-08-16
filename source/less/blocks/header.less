@@ -1,7 +1,7 @@
 .header {
   position: relative;
   padding: 58px 0 6px 0;
-  background: url("../img/footer-logo 2.svg") no-repeat center 22px;
+  background: url("../img/footer-logo 2.svg") no-repeat 50% 22px;
 }
 
 .header__logo {
@@ -13,8 +13,7 @@
 @media (min-width: @tablet-width) {
   .header {
     background: none;
-    width: 768px;
-    padding: 16px 20px;
+    padding: 16px 30px 16px 258px;
   }
 
   .header-nav__list {
@@ -26,5 +25,17 @@
   .header {
     /*width: 1440px;*/
     /*padding: 52px 110px 52px 110px;*/
+    padding: 0;
+  }
+
+  .header__container {
+    /*padding-left: 50%;*/
+    width: 1440px;
+    margin: 0 auto;
+    /*padding-left: 50%;*/
+  }
+
+  .header__nav {
+    padding-right: 81px;
   }
 }

@@ -2,6 +2,7 @@
   /*position: relative;
   margin: 0 auto 20px auto;*/
   margin: 0 auto 20px auto;
+  background: linear-gradient(#64a83b 63.4%, #ffffff 63%);
 }
 
 .main__program {
@@ -9,9 +10,20 @@
 }
 
 .main__product-about {
-  margin: 0 auto;
+  margin: 0 auto 73px auto;
 }
 
 .main__advertisement {
   margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .main__promo {
+    background: none;
+    margin: 0 auto 0 auto;
+  }
+
+  .main__product-about {
+    margin: 0 auto 45px auto;
+  }
 }

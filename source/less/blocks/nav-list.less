@@ -2,7 +2,6 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
-  display: none;
 }
 
 .nav-list__item {
@@ -18,16 +17,19 @@
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   display: block;
-  padding: 23px 10px 22px;
+  padding: 25px 10px 22px;
   text-align: center;
   text-decoration: none;
 }
 /*ставить видимость на модификатор? или на сам nav-list*/
 @media (min-width: @tablet-width) {
   .nav-list {
-    width: 461px;
+    min-width: 485px;
     display: flex;
     flex-wrap: wrap;
+    /* margin-left: auto; */
+    justify-content: flex-end;
+    column-gap: 14px;
     margin-left: auto;
   }
 
@@ -48,13 +50,16 @@
     height: 2px;
     background-color: #68b738;
     width: calc(100% - 20px);
-    margin: 0 auto;
+    margin: -13px auto 0 auto;
   }
 }
 
 @media (min-width: @desktop-width) {
   .nav-list {
-    width: 610px;
+    max-width: 517px;
+    margin-left: auto;
+    justify-content: flex-start;
+    column-gap: 14px;
   }
 
   .nav-list__link {
