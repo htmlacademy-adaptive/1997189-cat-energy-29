@@ -47,12 +47,16 @@
     /* grid-template-columns: 250px 250px;*/
     grid-template-columns: 1fr 1fr;
     /* column-gap: 50px;*/
-    column-gap: 137px;
     counter-reset: section;
+    column-gap: 59px;
+    row-gap: 37px;
   }
 
   .products__item {
     min-height: 280px;
+    flex-direction: column;
+    row-gap: 31px;
+    margin-bottom: 0;
   }
 
   .products__item::before {
@@ -72,9 +76,20 @@
     font-weight: 400;
     line-height: 280px;
     position: absolute;
-    right: 0;
-    top: -49px;
+    right: 77px;
+    top: -41px;
     z-index: -1;
+  }
+
+  .products__item--ingredients::after {
+    right: 99px;
+    top: -41px;
+  }
+
+  .products__text {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 80%;
   }
 }
 

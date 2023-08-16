@@ -3,7 +3,7 @@
 }
 
 .footer__socials-wrapper {
-  padding: 40px 0;
+  padding: 40px 20px;
 }
 
 .footer__socials {
@@ -13,17 +13,38 @@
   border-bottom: 2px solid #d9d9d9;
 }
 
+.footer__copyright {
+  padding-top: 26px;
+}
+
 @media (min-width: @tablet-width) {
   .footer__socials-wrapper {
     display: grid;
-    grid-template-columns: 168px 1fr 168px;
+    grid-template-columns: 168px 1fr 162px;
+    padding: 41px 30px;
+  }
+
+  .footer__socials {
+    border-bottom: none;
+  }
+
+  .footer__logo {
+    border-bottom: none;
+  }
+
+  .footer__copyright {
+    padding-top: 13px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .footer__socials-wrapper {
     max-width: 1440px;
-    padding: 0 110px;
+    padding: 68px 110px;
     margin: 0 auto;
+  }
+
+  .footer__copyright {
+    padding-top: 0;
   }
 }

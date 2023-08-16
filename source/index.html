@@ -8,24 +8,19 @@
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body class="page__body body">
   <header class="body__header header ">
+    <div class="header__container">
     <a class="header__logo logo" href="#">
       <picture>
         <img class="logo__image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип сайта Кэт Энерджи.">
       </picture>
     </a>
-
-    <nav class="header__nav header-nav">
-      <!--Для тоггл нужен модификатор для состояния крестика? Сделала псевдо-элементом, есть пустой спан(((-->
-      <button class="header-nav__toggle toggle toggle--cross" type="button">
-        <span class="toggle__for"></span>
+    <nav class="header__nav header-nav header-nav--opened header-nav--nojs">
+      <button class="header-nav__toggle toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-
-      <!--Модификатор для состояния, когда виден нав????-->
-      <ul class="header-nav__list nav-list nav-list--active">
+      <ul class="header-nav__list nav-list">
         <li class="nav-list__item nav-list__item--current">
           <a class="nav-list__link" href="#">Главная</a>
         </li>
@@ -37,20 +32,21 @@
         </li>
       </ul>
     </nav>
+  </div>
   </header>
 
   <main class="body__main main">
     <h1 class="visually-hidden">Сайт интернет-магазина Кэт Энерджи.</h1>
     <section class="main__promo promo">
 <div class="promo__container promo--green-theme">
-        <div class="promo__wrapper">
-          <h2 class="promo__heading">
-            Функциональное питание для котов
-          </h2>
-          <p class="promo__slogan">Занялся собой? Займись котом!</p>
-          <!--На кнопку нужен еще один класс - блок promo-button для стилей. напр, расположение этой кнопки в гриде? или расположение можно поставить в элемент promo__button-->
-          <a class="promo__button button" href="#">Подобрать программу</a>
-        </div>
+  <div class="promo__wrapper">
+    <h2 class="promo__heading">
+      Функциональное питание для котов
+    </h2>
+    <p class="promo__slogan">Занялся собой? Займись котом!</p>
+
+    <a class="promo__button button" href="#">Подобрать программу</a>
+  </div>
       </div>
     </section>
     <section class="main__program program">
@@ -60,8 +56,7 @@
           <h3 class="program__caption">
             Похудение
           </h3>
-          <p class="program__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
-            поможет вашему коту нарастить необходимые мышцы!</p>
+          <p class="program__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           <a class="program__link" href="#">Каталог slim</a>
         </li>
 
@@ -77,6 +72,7 @@
     </section>
 
     <section class="main__product-about product-about">
+      <div class="product-about__wrapper">
       <h2 class="product-about__caption">Как это работает</h2>
       <ol class="product-about__list products">
         <li class="products__item products__item--ingredients">
@@ -100,6 +96,7 @@
 </p>
         </li>
       </ol>
+    </div>
     </section>
 
     <section class="main__advertisement advertisement">
@@ -134,16 +131,16 @@
       </div>
     </div>
     </section>
-
-
   </main>
   <footer class="body__footer footer">
     <section class="footer__contacts footer-contacts">
       <h3 class="visually-hidden">Адрес интернет-магазина Кэт Энерджи.</h3>
       <div class="footer-contacts__address-wrapper">
-        <p class="footer-contacts__text">Приглашаем к сотрудничеству дилеров!</p>
+        <p class="footer-contacts__text">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
         <address class="footer-contacts__address">ул. Большая
-          Конюшенная, д. 19/8 Санкт-Петербург</address>
+          Конюшенная, д. 19/8
+            <span class="footer-contacts__city">Санкт-Петербург</span>
+          </address>
       </div>
       <img class="footer-image" src="img/footer-map.jpg" width="320" height="362"
         alt="ул. Большая Конюшенная, д. 19/8, Санкт-Петербург.">
@@ -238,6 +235,7 @@
     </div>
     </section>
   </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>

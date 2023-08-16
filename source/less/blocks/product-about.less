@@ -1,4 +1,4 @@
-.product-about {
+.product-about__wrapper {
   padding: 0 20px;
 }
 
@@ -7,7 +7,7 @@
   margin-bottom: 40px;
   color: #000000;
   text-align: left;
-  font-family: "Oswald";
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: 400;
@@ -17,7 +17,17 @@
 
 @media (min-width: @tablet-width) {
   .product-about {
-    padding: 0 30px;
+    &::after {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: #e6e6e6;
+    }
+  }
+
+  .product-about__wrapper {
+    padding: 15px 30px 6px 30px;
   }
 
   .product-about__caption {
@@ -25,12 +35,15 @@
     font-style: normal;
     font-weight: 400;
     line-height: 60px;
+    margin-bottom: 72px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .product-about {
+  .product-about__wrapper {
     max-width: 1440px;
     padding: 0 110px;
+    margin: 0 auto;
   }
+  /*переименовала из product-about*/
 }
