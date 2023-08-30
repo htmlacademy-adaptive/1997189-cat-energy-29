@@ -1,0 +1,93 @@
+.products-extra__heading {
+  margin-bottom: 36px;
+}
+
+.products-extra__wrapper {
+  padding: 0 20px;
+}
+
+.products-extra__promotion {
+  background-image: url("../img/promotion-background.jpg");
+  background-repeat: no-repeat;
+  padding: 58px 20px 43px 20px;
+  background-color: #68b738;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/promotion-background@2x.jpg");
+    /*background-size: 280px auto;*/
+    background-size: cover;
+  }
+}
+
+.products-extra__promotion::before {
+  content: "";
+  display: block;
+  width: 78px;
+  height: 80px;
+  background-image: url("../img/gift-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto 48px auto;
+}
+
+.products-extra__text {
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* margin-bottom: 35px;*/
+}
+
+@media (min-width: @tablet-width) {
+  .products-extra__heading {
+    margin-bottom: 80px;
+  }
+
+  .products-extra__promotion {
+    display: flex;
+    justify-content: space-between;
+    background-image: url("../img/promotion-background-tablet1x.jpg");
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promotion-background-tablet2x@2x.jpg");
+      /*background-size: 707px auto;*/
+      background-size: cover;
+    }
+
+    &::before {
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .products-extra__wrapper {
+    column-gap: 80px;
+    padding: 0 20px;
+    display: flex;
+  }
+
+  .products-extra__promotion {
+    width: 245px;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: flex-start;
+    background-image: url("../img/promotion-background-desktop1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promotion-background-desktop2x@2x.jpg");
+      /*background-size: 245px auto;*//*Какой размер указывать*/
+      background-size: cover;
+    }
+  }
+
+  .products-extra__list {
+    flex-grow: 1;
+  }
+}

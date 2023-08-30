@@ -1,0 +1,40 @@
+.extra-item {
+  border-top: 1px solid #cdcdcd;
+  padding: 13px 0 19px 0;
+}
+
+.extra-item__list {
+  padding: 0;
+  margin: 0 0 15px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.extra-item__description {
+  margin: 0;
+  padding: 0;
+}
+
+.extra-item:last-child {
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.extra-item__caption {
+  margin: 0;
+  padding: 0;
+  color: #222222;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+}
+
+@media (min-width: @tablet-width) {
+  .extra-item__caption {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}

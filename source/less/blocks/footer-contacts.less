@@ -1,13 +1,20 @@
 .footer-contacts__address-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 10px;
+  /*column-gap: 10px;*/
   padding: 0 20px;
+  padding-top: 27px;
+  padding-bottom: 26px;
+}
+
+.footer-contacts__adress-wrapper--grey-theme {
+  background-color: @basic-grey;
 }
 
 .footer-contacts__text {
   margin: 0;
   padding: 0;
+  padding-right: 5px;
   color: #111111;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
@@ -18,11 +25,17 @@
 }
 
 .footer-contacts__address {
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px; /* 142.857% */
-  text-align: right;
+  text-align: left;
+}
+
+.footet-contacts__city {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 @media (min-width: @tablet-width) {
@@ -30,6 +43,7 @@
     /*grid-template-columns: 163px 163px;*/
     column-gap: 302px;
     padding: 61px 70px;
+    margin-top: 101px;
   }
 
   .footer-contacts__text {

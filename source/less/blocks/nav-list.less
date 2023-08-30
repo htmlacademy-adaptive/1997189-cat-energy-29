@@ -24,7 +24,7 @@
 /*ставить видимость на модификатор? или на сам nav-list*/
 @media (min-width: @tablet-width) {
   .nav-list {
-    min-width: 485px;
+    min-width: 486px;
     display: flex;
     flex-wrap: wrap;
     /* margin-left: auto; */
@@ -56,10 +56,11 @@
 
 @media (min-width: @desktop-width) {
   .nav-list {
-    max-width: 517px;
-    margin-left: auto;
-    justify-content: flex-start;
-    column-gap: 14px;
+    max-width: 550px;
+    /* margin-left: auto; */
+    justify-content: flex-end;
+    /* column-gap: 14px; */
+    margin-right: -10px;
   }
 
   .nav-list__link {
@@ -71,5 +72,9 @@
 
   .nav-list__item--current::after {
     background-color: #ffffff;
+  }
+
+  .nav-list__link--dark-theme {
+    color: #111111;
   }
 }

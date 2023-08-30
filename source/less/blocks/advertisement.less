@@ -1,5 +1,5 @@
 .advertisement {
-  padding: 0 20px;
+  padding: 0 20px 40px 20px;
   background-color: @darken-grey;
 }
 
@@ -50,6 +50,10 @@
   text-transform: uppercase;
 }
 
+.advertisement__text-wrapper {
+  margin-bottom: 20px;
+}
+
 @media (min-width: @tablet-width) {
   .advertisement {
     padding: 0 30px;
@@ -60,6 +64,7 @@
     display: grid;
     grid-template-columns: 162px 162px 1fr;
     column-gap: 43px;
+    margin-bottom: 83px;
   }
 
   .advertisement__cost-description,
@@ -114,14 +119,18 @@
     }
   }
 
+  .advertisement__caption {
+    max-width: 450px;
+  }
+
   .advertisement__text {
     padding-top: 70px;
     max-width: 436px;
   }
 
   .advertisement__content-container {
-    /*width: 1440px;*/
-    padding: 0 110px;
+    width: 1280px;
+    padding: 0 30px;
     position: relative;
     z-index: 2;
     max-width: 1440px;

@@ -1,0 +1,129 @@
+.card {
+  padding: 19px 0 24px 0;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.card--show-more {
+  padding-top: 78px;
+}
+
+.card__caption {
+  margin: 0;
+  padding: 0;
+  color: #222222;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  /*max-width: 127px;*/
+  padding-right: 62px;
+}
+
+.card__about,
+.card__definition,
+.card__description {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+}
+
+.card__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  /*width: 140px;
+  height: 112px;*/
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+  padding: 10px;
+}
+
+.card__caption-link {
+  text-decoration: none;
+  justify-content: flex-start;
+  color: inherit;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.card__image {
+  display: block;
+  object-fit: scale-down;
+}
+
+.card__about {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__wrapper {
+  padding: 0 20px;
+}
+
+.card__wrapper--grid {
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  row-gap: 12px;
+}
+
+.card__catalog-link {
+  grid-column: 1/-1;
+  font-size: 16px;
+}
+
+
+@media (min-width: @tablet-width) {
+  .card {
+    border-bottom: none;
+    padding-top: 0;
+  }
+
+  .card__caption {
+    text-align: center;
+    font-size: 20px;
+    line-height: 24px;
+    padding-right: 0;
+  }
+
+  .card--grey {
+    background-color: #f2f2f2;
+  }
+
+  .card--before {
+    position: relative;
+  }
+
+  .card--before::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 83px;
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+  }
+
+  .card__wrapper {
+    grid-template-columns: 1fr;
+    position: relative;
+    z-index: 1;
+  }
+
+  .card--show-more {
+    border: 2px solid #f2f2f2;
+    padding-top: 78px;
+  }
+
+  .card__about {
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
