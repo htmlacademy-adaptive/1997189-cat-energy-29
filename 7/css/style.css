@@ -1037,13 +1037,14 @@
   display: block;
   width: 66px;
   height: 50px;
-  background-image: url("../img/cat-pro-mobile.svg");
+  background-image: url("../img/cat-pro-tablet.svg");
   background-repeat: no-repeat;
   background-position: center center;
   position: absolute;
   z-index: 2;
   top: 25px;
   left: 13px;
+  background-size: 64px;
 }
 @media (min-width: 768px) {
   .program {
@@ -1081,16 +1082,15 @@
     /*background-image: url("../img/cat-slim-tablet.svg");*/
     /*top: 21px;
       left: 458px;*/
-    top: 80px;
+    top: 82px;
+    background-size: 139px;
     left: 63%;
   }
   .program__item--pro::after {
     width: 269px;
     height: 200px;
-    background-image: url("../img/cat-pro-tablet.svg");
-    /*top: 28px;
-      left: 420px;*/
-    top: 92px;
+    background-size: 267px;
+    top: 94px;
     left: 58%;
   }
   .program__caption {
@@ -1144,14 +1144,14 @@
     top: 45px;
   }
   .program__item--slim::after {
-    background-image: url("../img/cat-slim-desktop.svg");
     top: -12px;
     left: 1px;
+    background-size: 71px;
   }
   .program__item--pro::after {
-    background-image: url("../img/cat-pro-desktop.svg");
-    top: -8px;
+    top: -6px;
     left: -35px;
+    background-size: 131px;
   }
 }
 .product-about__wrapper {
