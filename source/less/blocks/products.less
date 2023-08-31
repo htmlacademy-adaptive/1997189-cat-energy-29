@@ -97,12 +97,20 @@
   .products {
     /*grid-template-columns: 250px 250px 250px 250px;*/
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 110px;
+    column-gap: 80px;
   }
 
   .products__item {
     font-size: 16px;
     line-height: 24px;
     flex-direction: column;
+  }
+
+  .products__item::after {
+    right: 0;
+  }
+
+  .products__item--ingredients::after {
+    right: 21px;
   }
 }
