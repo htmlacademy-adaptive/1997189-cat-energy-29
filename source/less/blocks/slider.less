@@ -1,0 +1,145 @@
+.slider {
+  width: 280px;
+  height: 256px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.slider__block {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 280px;
+  height: 256px;
+}
+
+.slider__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 256px;
+
+  &::before {
+    content: "";
+    width: 280px;
+    height: 256px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+.slider__item--before {
+  background: #eaeaea;
+  z-index: 5;
+  width: 50%;
+  transition: all 2s;
+  overflow: hidden;
+  border-right: 4px solid #666666;
+
+  &::before {
+    background-image: url("../img/slider/before-m.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/slider/before-m@2x.png");
+      background-size: 280px auto;
+    }
+  }
+}
+
+.slider--state-before .slider__item--before {
+  width: 100%;
+}
+
+.slider--state-after .slider__item--before {
+  width: 0;
+}
+
+.slider__item--after {
+  z-index: 1;
+
+  &::before {
+    background-image: url("../img/slider/after-m.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/slider/after-m@2x.png");
+      background-size: 280px auto;
+    }
+  }
+}
+
+.slider__button {
+  width: 40px;
+  height: 40px;
+  display: block;
+  border-radius: 50%;
+  border: 2px solid #666666;
+  background: #ffffff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  cursor: pointer;
+  transition: all 2s;
+}
+
+.slider--state-before .slider__button {
+  left: 100%;
+}
+
+.slider--state-after .slider__button {
+  left: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .slider {
+    width: 560px;
+    height: 512px;
+  }
+
+  .slider__block {
+    width: 560px;
+    height: 512px;
+  }
+
+  .slider__item {
+    height: 512px;
+
+    &::before {
+      width: 560px;
+      height: 512px;
+    }
+  }
+
+  .slider__item--before::before {
+    background-image: url("../img/slider/before-tablet@1x.png");
+    background-size: 560px auto;
+  }
+
+  .slider__item--after::before {
+    background-image: url("../img/slider/after-tablet@1x.png");
+    background-size: 560px auto;
+  }
+
+  @media (min-resolution: 2dppx) {
+    .slider__item--before::before {
+      background-image: url("../img/slider/before-tablet@2x.png");
+      background-size: 560px auto;
+    }
+
+    .slider__item--after::before {
+      background-image: url("../img/slider/after-tablet@2x.png");
+      background-size: 560px auto;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider {
+    position: absolute;
+    right: 29px;
+    top: 2px;
+  }
+}

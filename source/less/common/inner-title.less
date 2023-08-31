@@ -1,0 +1,39 @@
+.inner-title {
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+}
+
+.inner-title--catalog {
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.inner-title--form {
+  border-top: 1px solid #d9d9d9;
+}
+
+@media (min-width: @tablet-width) {
+  .inner-title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .inner-title--catalog {
+    border: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .inner-title {
+    width: 1280px;
+  }
+
+  .inner-title--catalog {
+    border: none;
+  }
+}
