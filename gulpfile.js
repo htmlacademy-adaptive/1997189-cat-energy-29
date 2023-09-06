@@ -11,8 +11,14 @@ import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgstore from 'gulp-svgstore';
 import svgo from 'gulp-svgmin';
-/*import del from 'del';*/
 import { deleteAsync } from 'del';
+import { stacksvg } from "gulp-stacksvg";
+
+export const makeStack = () => {
+  return gulp.src('source/img/icons/**/*.svg')
+  .pipe(stacksvg({output: 'sprite'}))
+  .pipe(gulp.dest('build/img/iconsStack'));
+};
 
 export const clean = () => {
   return deleteAsync('build');
@@ -135,6 +141,7 @@ export const build = gulp.series(
     scripts,
     svg,
     sprite,
+    makeStack,
     createWebp
   )
 );
@@ -149,6 +156,7 @@ export default gulp.series(
     scripts,
     svg,
     sprite,
+    makeStack,
     createWebp
   ),
   gulp.series(
