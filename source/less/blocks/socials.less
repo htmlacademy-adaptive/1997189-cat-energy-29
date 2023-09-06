@@ -15,3 +15,53 @@
     padding-top: 0;
   }
 }
+
+.socials__link--vkontakte::before {
+  /*position: absolute;*/
+  content: "";
+  display: block;
+  mask-image: url("../img/sprite.svg#vk");
+  background-color: #666666;
+  mask-position: center;
+  width: 30px;
+  height: 30px;
+}
+
+.socials__link--youtube::before {
+  content: "";
+  display: block;
+  mask-image: url("../img/sprite.svg#youtube");
+  background-color: #666666;
+  mask-position: center;
+  width: 30px;
+  height: 30px;
+}
+
+.socials__link--telegram::before {
+  content: "";
+  display: block;
+  mask-image: url("../img/sprite.svg#telegram");
+  background-color: #666666;
+  mask-position: center;
+  width: 30px;
+  height: 30px;
+}
+
+.socials__link {
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  &:hover::before,
+  &:focus::before,
+  &:focus-visible::before {
+    background-color: #68b738;
+  }
+
+  &:active::before {
+    background-color: #68b738;
+    opacity: 0.3;
+  }
+
+}

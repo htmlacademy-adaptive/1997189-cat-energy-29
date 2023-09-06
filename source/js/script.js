@@ -28,5 +28,4 @@ if(sliderButton){
       slider.classList.add('slider--state-after');
     }
   });
-
 }
