@@ -45,46 +45,43 @@
   }
 }
 
+//Цвет для спрайта в разметке
 .text-input__svg {
- position: absolute;
- right: 10px;
- top: 25px;
+  position: absolute;
+  right: 10px;
+  stroke: #000000;
+  top: 25px;
 }
 
-.text-input__input:hover + svg  {
-  stroke: red;
-  fill:  red;
+.text-input__input:hover + svg {
+  stroke: blue;
 }
 
-.text-input__svg {
-  fill: red;
-  stroke: orange;
+.text-input__input:invalid + svg {
+  stroke: #ff8282;
 }
 
-/*.text-input__label--email::after {
+.text-input__label--phone::after {
   content: "";
   display: block;
-  mask-image: url("../img/icons/sprite.svg#email");
+  mask-image: url("../img/icons/sprite.svg#input-phone");
   background-color: #000000;
   mask-position: center;
   width: 20px;
   height: 20px;
-  //position: absolute;
+  position: absolute;
   right: 10px;
   top: 25px;
 }
 
-.text-input__input:hover ~ .text-input__label--email::after  {
-  background-color: red;
-}
-
-.text-input__input:focus + .text-input__svg {
-  fill: #68b738;
+.text-input__input:hover + .text-input__label--phone::after svg {
+  background-color: blue;
+  stroke: orange;
 }
 
 .text-input__input:invalid + .text-input__label--email::after {
   background-color: #ff8282;
-}*/
+}
 
 @media (min-width: @tablet-width) {
   .text-input {
