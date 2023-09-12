@@ -31,7 +31,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
-  margin-bottom: 21px;
+  margin-bottom: 11px;
 
   &::after {
     content: "";
@@ -53,12 +53,37 @@
   line-height: 16px;
   text-transform: uppercase;
   text-decoration: none;
+  display: flex;
+  column-gap: 15px;
+  min-width: 177px;
+  padding: 7px 1px;
+  max-width: 190px;
+
+  &::after {
+    content: "";
+    width: 25px;
+    height: 15px;
+    display: block;
+    background-image: url("../img/icons/sprite.svg#icon-arrow");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.program__link:hover::after,
+.program__link:focus::after {
+  width: 36px;
+}
+
+.program__link:active,
+.program__link:active::after {
+  opacity: 0.3;
 }
 
 .program__item {
   background-color: @basic-grey;
-  padding: 30px 20px 18px 20px;
-  margin-bottom: 20px;
+  padding: 30px 20px 21px 20px;
+  margin-bottom: 13px;
 
   /*можно это сделать блоком? и на блок повесить релетив? или релатив нужно вешать на program__item*/
   &--pro,
@@ -86,7 +111,7 @@
     background-color: @basic-green;
     border-radius: 50%;
     position: absolute;
-    top: 25px;
+    top: 23px;
     left: 20px;
   }
 
@@ -95,7 +120,7 @@
     display: block;
     width: 36px;
     height: 50px;
-    background-image: url("../img/cat-slim-mobile.svg");
+    background-image: url("../img/icons/sprite.svg#cat-slim-mobile");
     background-repeat: no-repeat;
     background-position: center center;
     position: absolute;
@@ -109,14 +134,14 @@
     display: block;
     width: 66px;
     height: 50px;
-    background-image: url("../img/cat-pro-tablet.svg");
+    background-image: url("../img/icons/sprite.svg#cat-pro-tablet");
     background-repeat: no-repeat;
     background-position: center center;
     position: absolute;
     z-index: 2;
-    top: 25px;
-    left: 13px;
-    background-size: 64px
+    top: 24px;
+    left: 12px;
+    background-size: 65px;
   }
 }
 

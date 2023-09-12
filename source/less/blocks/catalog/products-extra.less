@@ -33,7 +33,7 @@
 
 .products-extra__text {
   padding: 0;
-  margin: 0;
+  /*margin: 0;*/
   color: #ffffff;
   text-align: center;
   font-size: 16px;
@@ -41,6 +41,12 @@
   font-weight: 400;
   line-height: 20px;
   /* margin-bottom: 35px;*/
+  width: 182px;
+  margin: 0 auto;
+}
+
+.products-extra__list {
+  margin-bottom: 33px;
 }
 
 @media (min-width: @tablet-width) {
@@ -48,11 +54,20 @@
     margin-bottom: 80px;
   }
 
+  .products-extra__list {
+    margin-bottom: 68px;
+  }
+
+  .products-extra__wrapper {
+    padding: 0 30px;
+  }
+
   .products-extra__promotion {
     display: flex;
     justify-content: space-between;
     background-image: url("../img/promotion-background-tablet1x.jpg");
     background-size: cover;
+    padding: 58px 114px 63px 80px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/promotion-background-tablet2x@2x.jpg");
@@ -64,20 +79,29 @@
       margin: 0;
     }
   }
+
+  .products-extra__text {
+    margin: unset;
+    text-align: left;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .products-extra__wrapper {
     column-gap: 80px;
-    padding: 0 20px;
+    width: 1280px;
+    padding: 0 30px;
+    margin: 0 auto;
     display: flex;
   }
 
   .products-extra__promotion {
     width: 245px;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 51px;
     justify-content: flex-start;
+    padding: 55px 19px 40px 19px;
+    align-items: center;
     background-image: url("../img/promotion-background-desktop1x.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -89,5 +113,10 @@
 
   .products-extra__list {
     flex-grow: 1;
+    margin-bottom: 0;
+  }
+
+  .products-extra__text {
+    text-align: center;
   }
 }

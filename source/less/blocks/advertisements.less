@@ -7,6 +7,8 @@
 .advertisements__wrapper {
   width: 124px;
   padding-top: 14px;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
 }
 
 .advertisements__item {
@@ -26,10 +28,11 @@
   font-style: normal;
   font-weight: 400;
   line-height: 14px; /* 100% */
-  width: 77px;
-  margin: 0 auto;
   text-transform: lowercase;
-  /*padding: 0 12px;*/
+  margin: 0 auto -17px;
+  width: 70px;
+  padding: 0 8px;
+  background-color: #eaeaea;
 }
 
 @media (min-width: @tablet-width) {
@@ -49,9 +52,17 @@
     font-size: 14px;
     line-height: 14px;
     width: 130px;
+    background-color: #ffffff;
   }
 
   .advertisements__wrapper {
     width: 162px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .advertisements__description {
+    background-color: #eaeaea;
   }
 }

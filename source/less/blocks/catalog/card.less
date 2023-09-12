@@ -1,6 +1,8 @@
 .card {
-  padding: 19px 0 24px 0;
+  /*padding: 19px 0 24px 0;*/
   border-bottom: 1px solid #ebebeb;
+  padding-top: 19px;
+  padding-bottom: 25px;
 }
 
 .card--show-more {
@@ -17,7 +19,7 @@
   line-height: 20px;
   text-transform: uppercase;
   /*max-width: 127px;*/
-  padding-right: 62px;
+  padding: 2px 62px 2px 0;
 }
 
 .card__about,
@@ -43,7 +45,9 @@
   font-style: normal;
   font-weight: 400;
   line-height: 20px; /* 125% */
-  padding: 10px;
+  /*padding: 10px;*/
+  width: 140px;
+  height: 112px;
 }
 
 .card__caption-link {
@@ -69,7 +73,7 @@
 }
 
 .card__wrapper--grid {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 140px 1fr;
   display: grid;
   row-gap: 12px;
 }
@@ -84,17 +88,29 @@
   .card {
     border-bottom: none;
     padding-top: 0;
+    padding-bottom: 39px;
+  }
+
+  .card__link {
+    align-items: start;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 33px;
   }
 
   .card__caption {
     text-align: center;
     font-size: 20px;
     line-height: 24px;
-    padding-right: 0;
+    padding: 3px 44px;
   }
 
-  .card--grey {
-    background-color: #f2f2f2;
+  .card__wrapper--grid {
+    row-gap: 0;
+  }
+
+  .card__caption-link {
+    margin-bottom: 18px;
   }
 
   .card--before {
@@ -104,26 +120,72 @@
   .card--before::before {
     content: "";
     position: absolute;
-    display: block;
     width: 100%;
-    height: 83px;
-    background-color: #ffffff;
-    top: 0;
+    height: calc(100% - 71px);
+    background-color: #f2f2f2;
+    bottom: 0;
     left: 0;
+  }
+
+  .card--show-more {
+    position: relative;
+    padding-top: 72px;
   }
 
   .card__wrapper {
     grid-template-columns: 1fr;
     position: relative;
     z-index: 1;
+    padding: 0 39px;
   }
 
-  .card--show-more {
+  .card--show-more .card__wrapper {
+    padding-top: 161px;
+  }
+
+  .card--show-more::before {
+    content: "";
+    height: calc(100% - 71px);
+    position: absolute;
+    width: 100%;
+    background-color: #ffffff;
     border: 2px solid #f2f2f2;
-    padding-top: 78px;
+  }
+
+
+  .card__text-wrapper {
+    margin-bottom: 27px;
   }
 
   .card__about {
     border-bottom: 1px solid #cdcdcd;
+    padding-bottom: 8px;
+    margin-bottom: 7px;
+    font-size: 16px;
+  }
+
+  .card__definition,
+  .card__description {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .card--before::before,
+  .card--show-more::before {
+    height: calc(100% - 80px);
+  }
+
+  .card__caption {
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  .card__link {
+    margin: 0 auto 41px;
+  }
+
+  .card {
+    padding-bottom: 41px;
   }
 }

@@ -28,7 +28,7 @@
   width: 18px;
   height: 18px;
   display: none;
-  background-image: url("../img/checkbox-tick.svg");
+  background-image: url("../img/icons/sprite.svg#checkbox-tick");
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
@@ -38,6 +38,27 @@
 
 .checkbox__input:checked + .checkbox__label::after {
   display: block;
+}
+
+.checkbox__input:hover + .checkbox__label::before,
+.checkbox__input:focus + .checkbox__label::before {
+  border: 1px solid #bababa;
+}
+
+.checkbox__input:focus-visible + .checkbox__label::before {
+  outline: 1px solid #000000;
+}
+
+.checkbox__input:disabled + .checkbox__label::before {
+  border-color: rgba(186, 186, 186, 0.3);
+}
+
+.checkbox__input:disabled + .checkbox__label {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.checkbox__input:checked:disabled + .checkbox__label::after {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
@@ -53,13 +74,7 @@
   }
 
   .checkbox__label::after {
-    background-image: url("../img/checkbox-tick-tablet.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
     width: 26px;
     height: 26px;
-    top: -1px;
-    left: 6px;
   }
 }

@@ -16,15 +16,15 @@ import { stacksvg } from "gulp-stacksvg";
 
 export const makeStack = () => {
   return gulp.src('source/img/icons/**/*.svg')
+  .pipe(svgo())
   .pipe(stacksvg({output: 'sprite'}))
-  .pipe(gulp.dest('build/img/iconsStack'));
+  .pipe(gulp.dest('build/img/icons'));
 };
 
 export const clean = () => {
   return deleteAsync('build');
   };
 
-  /*function clean() { }*/
 
 export const styles = () => {
   return gulp.src('source/less/style.less', { sourcemaps: true })
@@ -67,33 +67,43 @@ const copyImages = () => {
 
 //Svg
 const svg = () => {
-  return gulp.src (['source/img/**/*.svg','!source/img/icons/*.svg'])
+  return gulp.src (['source/img/**/*.svg','!source/img/icons/*.svg','!source/img/iconsSprite/*.svg'])
   .pipe(svgo())
   .pipe(gulp.dest('build/img'));
 };
 
 const sprite = () => {
-  return gulp.src ('source/img/icons/*.svg')
+  return gulp.src ('source/img/iconsSprite/*.svg')
   .pipe(svgo())
   .pipe(svgstore ({
     inlineSvg: true
   }))
   .pipe(rename('sprite.svg'))
-  .pipe(gulp.dest('build/img'));
+  .pipe(gulp.dest('build/img/iconsSprite'));
 };
 
 //шрифты, манифест
-const copy = (done) => {
+export const copy = (done) => {
 gulp.src([
 "source/fonts/**/*.{woff2,woff}",
 "source/*.ico",
-/*"manifest.webmanifest",*/
 ], {
 base: "source"
 })
 .pipe(gulp.dest('build'));
 done();
 };
+
+export const copyManifest = (done) => {
+  gulp.src([
+  "manifest.webmanifest",
+  "favicon.ico",
+  ], {
+  base: "./"
+  })
+  .pipe(gulp.dest('build'));
+  done();
+  };
 
 //webp
 const createWebp = () => {
@@ -104,7 +114,7 @@ const createWebp = () => {
   .pipe(gulp.dest('build/img'));
 };
 
- const reload = (done) => {
+const reload = (done) => {
   browser.reload();
   done();
 };
@@ -134,6 +144,7 @@ const watcher = () => {
 export const build = gulp.series(
   clean,
   copy,
+  copyManifest,
   optimizeImages,
   gulp.parallel (
     styles,
@@ -150,6 +161,7 @@ export default gulp.series(
   clean,
   copy,
   copyImages,
+  copyManifest,
   gulp.parallel (
     styles,
     html,

@@ -75,7 +75,6 @@
   display: block;
   border-radius: 50%;
   border: 2px solid #666666;
-  background: #ffffff;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -83,6 +82,39 @@
   z-index: 20;
   cursor: pointer;
   transition: all 2s;
+
+  &:hover,
+  &:focus {
+    border-color: #68b738;
+  }
+
+  &:active {
+    border-color: #5eaa2f;
+    opacity: 0.6;
+  }
+}
+
+.slider__button::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+    height: 20px;
+    top: 9px;
+    left: 6px;
+  //background: #ffffff;
+  mask-image: url("../img/icons/sprite.svg#triangles-slider");
+  background-color: #666666;
+  mask-repeat: no-repeat;
+}
+
+.slider__button:hover::after,
+.slider__button:focus::after {
+  background-color: #68b738;
+}
+
+.slider__button:active::after {
+  background-color: #5eaa2f;
+  opacity: 0.6;
 }
 
 .slider--state-before .slider__button {
@@ -92,6 +124,16 @@
 .slider--state-after .slider__button {
   left: 0;
 }
+
+.slider__button:hover + .slider__block .slider__item--before,
+.slider__button:focus + .slider__block .slider__item--before {
+  border-right-color: #68b738;
+}
+
+.slider__button:active + .slider__block .slider__item--before {
+  border-right-color: rgba(94, 170, 47, 0.6);
+}
+
 
 @media (min-width: @tablet-width) {
   .slider {
