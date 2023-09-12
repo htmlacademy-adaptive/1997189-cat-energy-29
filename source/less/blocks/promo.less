@@ -64,7 +64,7 @@
   order: 2;
 }
 
-.promo--green-theme {
+.promo__container--green-theme {
   background-image: url("../img/cat-background-mobile.jpg");
   background-position: 50% top;
   background-repeat: no-repeat;
@@ -73,7 +73,7 @@
 }
 
 @media (min-resolution: 2dppx) {
-  .promo--green-theme {
+  .promo__container--green-theme {
     background-image: url("../img/cat-background-mobile@2x.jpg");
     background-size: 320px auto;
   }
@@ -84,7 +84,7 @@
     padding: 0 30px;
   }
 
-  .promo--green-theme {
+  .promo__container--green-theme {
     background-image: none;
   }
 
@@ -205,7 +205,7 @@
     position: relative;
   }
 
-  .promo--green-theme::before {
+  .promo__container--green-theme::before {
     content: "";
     width: 50%;
     height: calc(100% + 122px);
@@ -218,7 +218,7 @@
   }
 
   @media (min-resolution: 2dppx) {
-    .promo--green-theme::before {
+    .promo__container--green-theme::before {
       background-image: url("../img/cat-background-desktop@2x.jpg");
       background-size: 1041px auto;
     }

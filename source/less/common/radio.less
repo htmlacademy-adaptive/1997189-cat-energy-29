@@ -40,6 +40,27 @@
   display: block;
 }
 
+.radio__input:hover + .radio__label::before,
+.radio__input:focus + .radio__label::before {
+  border: 1px solid #bababa;
+}
+
+.radio__input:focus-visible + .radio__label::before {
+  outline: 1px solid #000000;
+}
+
+.radio__input:disabled + .radio__label::before {
+  border-color: rgba(186, 186, 186, 0.3);
+}
+
+.radio__input:disabled + .radio__label {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.radio__input:checked:disabled + .radio__label::after {
+  opacity: 0.3;
+}
+
 @media (min-width: @tablet-width) {
   .radio__label {
     font-size: 20px;

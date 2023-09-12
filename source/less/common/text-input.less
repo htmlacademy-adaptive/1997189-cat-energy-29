@@ -12,6 +12,10 @@
   line-height: 18px;
   text-transform: uppercase;
   padding-top: 12px;
+  display: flex;
+  column-gap: 10px;
+  position: relative;
+  width: 100%;
 }
 
 .text-input__input {
@@ -27,7 +31,60 @@
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    border: 2px solid #444444;
+  }
+
+  &:invalid {
+    border: 2px solid #ff8282;
+  }
 }
+
+.text-input__svg {
+ position: absolute;
+ right: 10px;
+ top: 25px;
+}
+
+.text-input__input:hover + svg  {
+  stroke: red;
+  fill:  red;
+}
+
+.text-input__svg {
+  fill: red;
+  stroke: orange;
+}
+
+/*.text-input__label--email::after {
+  content: "";
+  display: block;
+  mask-image: url("../img/icons/sprite.svg#email");
+  background-color: #000000;
+  mask-position: center;
+  width: 20px;
+  height: 20px;
+  //position: absolute;
+  right: 10px;
+  top: 25px;
+}
+
+.text-input__input:hover ~ .text-input__label--email::after  {
+  background-color: red;
+}
+
+.text-input__input:focus + .text-input__svg {
+  fill: #68b738;
+}
+
+.text-input__input:invalid + .text-input__label--email::after {
+  background-color: #ff8282;
+}*/
 
 @media (min-width: @tablet-width) {
   .text-input {

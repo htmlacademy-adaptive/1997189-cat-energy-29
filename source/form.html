@@ -2,10 +2,10 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="Магазин здорового питания для кошек.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="icon" href="favicon.ico">
-  <!--<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">-->
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
@@ -25,14 +25,14 @@
       <button class="header-nav__toggle toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <ul class="header-nav__list nav-list">
+      <ul class="header-nav__list nav-list ">
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="index.html">Главная</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="catalog.html"> Каталог продукции</a>
+        </li>
         <li class="nav-list__item nav-list__item--current">
-          <a class="nav-list__link nav-list__link--dark-theme" href="index.html">Главная</a>
-        </li>
-        <li class="nav-list__item">
-          <a class="nav-list__link nav-list__link--dark-theme" href="catalog.html"> Каталог продукции</a>
-        </li>
-        <li class="nav-list__item">
           <a class="nav-list__link nav-list__link--dark-theme" href="#">Подбор программы</a>
         </li>
       </ul>
@@ -46,21 +46,27 @@
       <span class="form-page__text-wrapper">Заполните анкету, и мы подберем программу питания для вашего кота</span>
   </p>
 
-<form class="form-page__form form" action="">
+<form class="form-page__form form" action="https://echo.htmlacademy.ru/" method="post">
   <div class="form-page__form-wrapper">
   <fieldset class="form__group group-name">
     <ul class="form__list group-name__list">
       <li class="form__item text-input group-name__item">
-        <label class="text-input__label" for="name">ИМЯ:*</label>
-        <input class="text-input__input" id="name" name="input-name" type="text" value="Барсик" placeholder="Введите имя питомца">
+        <label class="text-input__label" for="name">ИМЯ:*
+
+        <input class="text-input__input" id="name" name="input-name" type="text" value="Барсик" placeholder="Введите имя питомца" required>
+      </label>
       </li>
       <li class="form__item text-input group-name__item">
-        <label class="text-input__label" for="weight">Вес (кг):*</label>
-        <input class="text-input__input" type="text" value="7" id="weight" name="input-weight">
+        <label class="text-input__label" for="weight">Вес (кг):*
+
+        <input class="text-input__input" type="text" value="7" id="weight" name="input-weight" placeholder="Введите вес питомца" required>
+      </label>
       </li>
       <li class="form__item text-input group-name__item">
-        <label class="text-input__label" for="age">Возраст&nbsp;(лет):</label>
-        <input class="text-input__input" type="text" value="7" id="age" name="input-age">
+        <label class="text-input__label" for="age">Возраст&nbsp;(лет):
+
+        <input class="text-input__input" type="text" value="7" id="age" name="input-age" placeholder="Введите возраст питомца" required>
+      </label>
       </li>
     </ul>
   </fieldset>
@@ -90,23 +96,33 @@
 
     <ul class="form__list group-contact__list">
       <li class="form__item group-contact__item text-input">
-        <label class="text-input__label" for="">E-mail:*</label>
-        <input class="text-input__input" type="text" value="kuklachev@gmail.com">
+        <label class="text-input__label text-input__label--email" for="email">E-mail:*
+        <input class="text-input__input" id="email" name="email" type="text" value="kuklachev@gmail.com" required>
+      <svg class="text-input__svg" width="20" height="20">
+        <use xlink:href="img/iconsSprite/sprite.svg#email"></use>
+        </svg>
+      </label>
       </li>
 
       <li class="form__item group-contact__item text-input">
-        <label class="text-input__label" for="">Телефон:*</label>
-        <input class="text-input__input" type="text" value="8 (960) 900-60-90">
+        <label class="text-input__label text-input__label--phone" for="phone">Телефон:*
+
+        <input class="text-input__input" id="phone" name="phone" type="text" value="8 (960) 900-60-90" required>
+        <svg class="text-input__svg" width="20" height="20">
+          <use xlink:href="img/iconsSprite/sprite.svg#input-phone">
+          </use>
+        </svg>
+      </label>
       </li>
     </ul>
   </fieldset>
   <fieldset class="form__group group-comment">
     <h2 class="group-comment__heading heading-extra">
-      <span class="group-contact__text heading-extra__text">Комментарий</span>
+      <span class="heading-extra__text">Комментарий</span>
     </h2>
     <div class="group-comment__text-wrapper">
 <textarea class="group-comment__text" name="comment" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
-<label class="group-comment__text-row" for=""></label>
+<label class="group-comment__text-row" for="comment"></label>
 </div>
   </fieldset>
 
@@ -144,19 +160,37 @@
   <footer class="body__footer footer">
     <section class="footer__contacts footer-contacts">
       <h3 class="visually-hidden">Адрес интернет-магазина Кэт Энерджи.</h3>
-      <div class="footer-contacts__address-wrapper footer-contacts__adress-wrapper--grey-theme">
+      <div class="footer-contacts__address-wrapper footer-contacts__address-wrapper--grey">
         <p class="footer-contacts__text">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
         <address class="footer-contacts__address">ул. Большая
           Конюшенная, д. 19/8
             <span class="footer-contacts__city">Санкт-Петербург</span>
           </address>
       </div>
-      <img class="footer-image" src="img/footer-map.jpg" width="320" height="362"
-        alt="ул. Большая Конюшенная, д. 19/8, Санкт-Петербург.">
 
-      <iframe class="footer-image__iframe" width="320" height="362"
+      <div class="footer-contacts__map-container">
+      <iframe class="footer__iframe" title="Наш адрес ул. Большая Конюшенная,д.19/8, Санкт-Петербург." width="320" height="362"
         src="https://maps.google.com/maps?width=320px&amp;height=362px&amp;hl=ru&amp;q=%20%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,%20%D1%83%D0%BB.%20%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F%20%20%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F,%20%D0%B4.%2019/8+(Cat%20Energy)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
       </iframe>
+
+      <div class="footer-contacts__map-wrapper">
+<noscript>
+      <picture>
+        <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.jpg 2x">
+        <source type="image/webp" srcset="img/footer-map.webp 1x, img/footer-map@2x.webp 2x">
+        <source media = "(min-width: 1440px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x" type="image/png" width="172" height="196">
+        <source media = "(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x" type="image/png" width="168" height="200">
+        <img class="footer-image" src="img/footer-map.jpg" srcset="img/footer-map@2x.jpg 2x" width="320" height="362"
+        alt="ул. Большая Конюшенная, д. 19/8, Санкт-Петербург.">
+    </picture>
+  </noscript>
+      </div>
+  </div>
+</section>
+
+<section>
+  <h3 class="visually-hidden">Информация о нас в социальных сетях.</h3>
       <div class="footer__socials-wrapper">
       <a class="footer__logo footer-logo" href="#">
         <svg class="footer-logo__text" width="128" height="24" viewBox="0 0 128 24" fill="none"
@@ -198,16 +232,16 @@
         <li class="socials__item">
           <a class="socials__link socials__link--youtube" href="#">
             <span class="visually-hidden">youtube.</span>
-            </a>
+          </a>
         </li>
 
         <li class="socials__item">
           <a class="socials__link socials__link--telegram" href="#">
             <span class="visually-hidden">telegram.</span>
+
           </a>
         </li>
       </ul>
-
 
       <a class="footer__copyright copyright" href="https://htmlacademy.ru">
         <span class="copyright__text">HTML Academy</span>
@@ -226,7 +260,7 @@
         </svg>
       </a>
     </div>
-    </section>
+  </section>
   </footer>
   <script src="js/script.js"> </script>
 </body>
