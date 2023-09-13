@@ -1,13 +1,9 @@
 .advertisement {
-  padding: 0 20px 40px 20px;
+  padding: 0 20px 39px 20px;
   background-color: @darken-grey;
 }
 
 .advertisement__content-container {
-  margin: 0 auto;
-}
-
-.advertisement__wrapper {
   margin: 0 auto;
 }
 
@@ -30,7 +26,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
 
 .advertisement__list {
@@ -56,15 +52,24 @@
 
 @media (min-width: @tablet-width) {
   .advertisement {
-    padding: 0 30px;
-    background-color: #ffffff;
+    //padding: 0 30px;
+    padding: 0;
+    //  padding-bottom: 100px;
+    // background-image: linear-gradient(to top,#eaeaea 45%,#fff 45%);
+    background-color: inherit;
+  }
+
+  .advertisement__slider-wrapper {
+    padding-bottom: 100px;
+    background-image: linear-gradient(to top, #eaeaea 76%, #ffffff 76%);
   }
 
   .advertisement__text-wrapper {
     display: grid;
     grid-template-columns: 162px 162px 1fr;
     column-gap: 43px;
-    margin-bottom: 83px;
+    margin-bottom: 71px;
+    padding: 0 30px;
   }
 
   .advertisement__cost-description,
@@ -79,6 +84,7 @@
     line-height: 60px;
     text-align: left;
     margin-bottom: 60px;
+    padding: 0 30px;
   }
 
   .advertisement__text {
@@ -107,6 +113,8 @@
   .advertisement {
     padding: 0;
     background-color: @darken-grey;
+    position: relative;
+    margin: 0 auto;
 
     &::before {
       content: "";
@@ -119,21 +127,42 @@
     }
   }
 
+  .advertisement__slider-wrapper {
+    background-image: none;
+    position: absolute;
+    top: 2px;
+    right: 29px;
+  }
+
+  .advertisement__list {
+    margin-left: unset;
+    margin-right: unset;
+    margin-bottom: 50px;
+  }
+
   .advertisement__caption {
-    max-width: 450px;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    grid-column: 1/-1;
+    margin-bottom: 76px;
+    width: 450px;
   }
 
   .advertisement__text {
     padding-top: 70px;
     max-width: 436px;
+    margin-bottom: 70px;
   }
 
   .advertisement__content-container {
     width: 1280px;
     padding: 0 30px;
-    position: relative;
     z-index: 2;
-    max-width: 1440px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 296px;
+    position: relative;
   }
 
   .advertisement__wrapper {
@@ -143,10 +172,12 @@
   .advertisement__cost {
     grid-column: 1/-1;
     flex-direction: row;
-    justify-content: space-between;
+    column-gap: 66px;
   }
 
   .advertisement__text-wrapper {
-    grid-template-columns: 162px 162px;
+    grid-template-columns: 191px 198px;
+    padding: 0;
+    margin-bottom: 67px;
   }
 }

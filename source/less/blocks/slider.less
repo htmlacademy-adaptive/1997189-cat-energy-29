@@ -10,7 +10,7 @@
   margin: 0;
   list-style: none;
   width: 280px;
-  height: 256px;
+  height: 255px;
 }
 
 .slider__item {
@@ -31,7 +31,7 @@
 }
 
 .slider__item--before {
-  background: #eaeaea;
+  background-image: linear-gradient(#eaeaea 70px, #eaeaea 70px);
   z-index: 5;
   width: 50%;
   transition: all 2s;
@@ -176,12 +176,21 @@
       background-size: 560px auto;
     }
   }
+
+  .slider__item--before {
+    background-image: linear-gradient(#ffffff 117px, transparent 117px);
+  }
 }
 
 @media (min-width: @desktop-width) {
-  .slider {
+  .slider__wrapper {
+    background-image: none;
     position: absolute;
-    right: 29px;
     top: 2px;
+    right: 29px;
+  }
+
+  .slider__item--before {
+    background-image: linear-gradient(#ffffff 133px, transparent 133px);
   }
 }

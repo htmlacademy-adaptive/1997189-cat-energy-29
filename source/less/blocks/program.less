@@ -21,8 +21,13 @@
   line-height: 37px;
   text-transform: uppercase;
   margin-bottom: 29px;
-  padding-left: 71px;
+  padding-left: 75px;
   padding-right: 15px;
+}
+
+.program__row {
+  display: inline-block;
+  width: 97px;
 }
 
 .program__description {
@@ -31,6 +36,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
+  padding-left: 5px;
   margin-bottom: 11px;
 
   &::after {
@@ -54,10 +60,11 @@
   text-transform: uppercase;
   text-decoration: none;
   display: flex;
-  column-gap: 15px;
+  column-gap: 6px;
   min-width: 177px;
-  padding: 7px 1px;
+  padding: 7px 0;
   max-width: 190px;
+  justify-content: start;
 
   &::after {
     content: "";
@@ -82,8 +89,8 @@
 
 .program__item {
   background-color: @basic-grey;
-  padding: 30px 20px 21px 20px;
-  margin-bottom: 13px;
+  padding: 30px 20px 15px 15px;
+  margin-bottom: 20px;
 
   /*можно это сделать блоком? и на блок повесить релетив? или релатив нужно вешать на program__item*/
   &--pro,
@@ -152,6 +159,11 @@
 
   .program__link {
     font-size: 20px;
+    column-gap: 23px;
+  }
+
+  .program__row {
+    width: 108px;
   }
 
   .program__item {
@@ -215,7 +227,8 @@
     font-size: 16px;
     line-height: 24px;
     max-width: 54%;
-    margin-bottom: 60px;
+    margin-bottom: 52px;
+    padding-left: 0;
 
     &::after {
       display: none;
@@ -236,7 +249,7 @@
   .program__description {
     width: 457px;
     max-width: 457px;
-    margin-bottom: 34px;
+    margin-bottom: 27px;
   }
 
   .program__list {

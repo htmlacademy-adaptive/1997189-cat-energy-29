@@ -18,14 +18,15 @@
 
   <header class="body__header header ">
     <div class="header__container">
-    <a class="header__logo logo" href="#">
-      <picture>
-        <source media = "(min-width:1440px)" srcset="img/logo-desktop.svg" width="202" height="59">
-        <source media ="(min-width:768px)" srcset="img/logo-tablet.svg" width="174" height="50">
-        <img class="logo__image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип сайта Кэт Энерджи.">
-      </picture>
-    </a>
+      <a class="header__logo logo" href="#">
+        <picture>
+          <source media = "(min-width:1440px)" srcset="img/logo-desktop.svg" width="202" height="59">
+          <source media ="(min-width:768px)" srcset="img/logo-tablet.svg" width="174" height="50">
+          <img class="logo__image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип сайта Кэт Энерджи.">
+        </picture>
+      </a>
     <nav class="header__nav header-nav header-nav--opened header-nav--nojs">
+
       <button class="header-nav__toggle toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -66,7 +67,8 @@
             Похудение
           </h3>
           <p class="program__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <a class="program__link" href="#">Каталог slim</a>
+          <a class="program__link" href="#">
+            <span class="program__row">Каталог slim</span> </a>
         </li>
 
         <li class="program__item program__item--pro">
@@ -75,7 +77,9 @@
           </h3>
           <p class="program__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
             поможет вашему коту нарастить необходимые мышцы!</p>
-          <a class="program__link" href="#">Каталог pro</a>
+          <a class="program__link" href="#">
+            <span class="program__row">Каталог pro</span>
+          </a>
         </li>
       </ul>
     </section>
@@ -90,8 +94,7 @@
         </p>
         </li>
         <li class="products__item products__item--consistency">
-          <p class="products__text">
-          Выпускается в виде порошка,который нужно лишь залить кипятком и готово.
+          <p class="products__text">          Выпускается в виде порошка,который нужно лишь залить кипятком и готово.
           </p>
         </li>
         <li class="products__item products__item--usage">
@@ -111,8 +114,7 @@
     <section class="main__advertisement advertisement">
 <div class="advertisement__content-container">
       <h2 class="advertisement__caption">Живой пример</h2>
-      <div class="advertisement__wrapper">
-        <div class="advertisement__text-wrapper">
+          <div class="advertisement__text-wrapper">
           <p class="advertisement__text">
             Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
             изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
@@ -132,6 +134,7 @@
             <span class="advertisement__cost-text">15 000 РУБ.</span>
           </div>
         </div>
+        <div class="advertisement__slider-wrapper">
         <div class="advertisement__image-wrapper slider">
           <button class="slider__button" type="button">
             <span class="visually-hidden">Кнопка смещения слайдера влево или вправо</span>
@@ -143,7 +146,7 @@
 
         </div>
       </div>
-    </div>
+      </div>
     </section>
   </main>
   <footer class="body__footer footer">
@@ -178,7 +181,7 @@
   </div>
 </section>
 
-<section>
+<section class="footer__socials-box">
   <h3 class="visually-hidden">Информация о нас в социальных сетях.</h3>
       <div class="footer__socials-wrapper">
       <a class="footer__logo footer-logo" href="#">

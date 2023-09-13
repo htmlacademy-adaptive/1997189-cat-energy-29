@@ -18,6 +18,7 @@
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
+  padding: 0 10px;
   margin-bottom: 7px;
 }
 
@@ -45,23 +46,29 @@
     font-style: normal;
     font-weight: 400;
     line-height: 37px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
   .advertisements__description {
     font-size: 14px;
     line-height: 14px;
-    width: 130px;
+    width: 141px;
     background-color: #ffffff;
+    margin: 0 auto -20px;
   }
 
   .advertisements__wrapper {
     width: 162px;
+    padding-bottom: 14px;
   }
 }
 
 
 @media (min-width: @desktop-width) {
+  .advertisements {
+    justify-content: flex-start;
+  }
+
   .advertisements__description {
     background-color: #eaeaea;
   }
