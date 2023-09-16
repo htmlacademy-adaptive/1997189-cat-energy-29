@@ -13,16 +13,23 @@
   text-transform: uppercase;
   padding-top: 12px;
   display: flex;
-  column-gap: 10px;
+  align-items: flex-start;
+  column-gap: 12px;
   position: relative;
   width: 100%;
+}
+
+.text-input__row {
+  display: inline-block;
+  padding-top: 13px;
+  max-width: 92px;
 }
 
 .text-input__input {
   flex-grow: 1;
   height: 45px;
   border: 1px solid #e7e7e7;
-  padding: 0 15px 0 15px;
+  padding: 0 44px 0 14px;
   margin: 0;
   color: #444444;
   font-family: "Oswald", "Arial", sans-serif;
@@ -31,12 +38,14 @@
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
+  width: 100%;
 
   &:hover {
     border: 1px solid #cdcdcd;
   }
 
-  &:focus {
+  &:focus,
+  &:focus-visible {
     border: 2px solid #444444;
   }
 
@@ -48,13 +57,14 @@
 //Цвет для спрайта в разметке
 .text-input__svg {
   position: absolute;
-  right: 10px;
+  right: 12px;
   stroke: #000000;
   top: 25px;
 }
 
-.text-input__input:hover + svg {
-  stroke: blue;
+.text-input__input:hover + svg,
+.text-input__input:focus-visible + svg {
+  stroke: #68b738;
 }
 
 .text-input__input:invalid + svg {
@@ -91,7 +101,12 @@
   .text-input__label {
     font-size: 20px;
     font-style: normal;
-    padding-top: 16px;
+    padding-top: 0;
+  }
+
+  .text-input__row {
+    padding-top: 17px;
+    max-width: 118px;
   }
 
   .text-input__input {
@@ -99,5 +114,10 @@
     line-height: 18px;
     height: 52px;
     padding: 0 15px 0 19px;
+  }
+
+  .text-input__svg {
+    right: 14px;
+    top: 18px;
   }
 }

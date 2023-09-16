@@ -94,7 +94,7 @@
   .card {
     border-bottom: none;
     padding-top: 0;
-    padding-bottom: 39px;
+    padding-bottom: 34px;
   }
 
   .card__image {
@@ -117,6 +117,8 @@
 
   .card__wrapper--grid {
     row-gap: 0;
+    grid-template-rows: auto 1fr auto;
+    height: 100%;
   }
 
   .card__definition {
@@ -183,24 +185,48 @@
   .card__description {
     font-size: 16px;
   }
+
+  .card__catalog-link {
+    margin-bottom: 5px;
+  }
 }
 
 @media (min-width: @desktop-width) {
-  .card--before::before,
+  .card--before::before {
+    height: calc(100% - 77px);
+  }
+
+  .card--show-more {
+    padding-top: 77px;
+  }
+
   .card--show-more::before {
-    height: calc(100% - 80px);
+    height: calc(100% - 77px);
+  }
+
+  .card__image {
+    margin-top: -2px;
+    margin-left: 3px;
   }
 
   .card__caption {
-    padding: 0 15px;
+    padding: 0 11px 0 18px;
     text-align: center;
   }
 
+  .card__caption-link {
+    margin-bottom: 22px;
+  }
+
   .card__link {
-    margin: 0 auto 41px;
+    margin: 0 auto 31px;
   }
 
   .card {
-    padding-bottom: 41px;
+    padding-bottom: 35px;
+  }
+
+  .card__wrapper {
+    padding: 0 38px 0 39px;
   }
 }
