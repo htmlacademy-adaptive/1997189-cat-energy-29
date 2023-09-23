@@ -1,11 +1,7 @@
-const headerNav = document.querySelector('.header__nav');
-
-const headerNavToggle = document.querySelector('.header-nav__toggle');
-
 const sliderButton = document.querySelector('.slider__button');
 const slider = document.querySelector('.slider');
 
-headerNav.addEventListener('click', function () {
+/*headerNav.addEventListener('click', function () {
 if (headerNav.classList.contains('header-nav--closed')) {
   headerNav.classList.remove('header-nav--closed');
   headerNav.classList.add('header-nav--opened');
@@ -14,8 +10,14 @@ if (headerNav.classList.contains('header-nav--closed')) {
   headerNav.classList.add('header-nav--closed');
   headerNav.classList.remove('header-nav--opened');
   }
+});*/
+const nav = document.querySelector('.header-nav');
+nav.classList.add('header-nav--closed');
+const menuButton = document.querySelector('.toggle');
+menuButton.addEventListener('click',() => {
+nav.classList.toggle('header-nav--closed');
+nav.classList.toggle('header-nav--opened');
 });
-
 
 if(sliderButton){
   sliderButton.addEventListener('click', () => {

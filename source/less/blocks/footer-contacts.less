@@ -1,10 +1,7 @@
 .footer-contacts__address-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /*column-gap: 10px;*/
-  padding: 0 20px;
-  padding-top: 27px;
-  padding-bottom: 26px;
+  padding: 27px 20px 25px;
   column-gap: 4px;
 }
 
@@ -21,7 +18,7 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px; /* 125% */
+  line-height: 20px;
   text-transform: uppercase;
 }
 
@@ -30,7 +27,7 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px; /* 142.857% */
+  line-height: 20px;
   text-align: left;
 }
 
@@ -78,9 +75,12 @@
 
 @media (min-width: @tablet-width) {
   .footer-contacts__address-wrapper {
-    /*grid-template-columns: 163px 163px;*/
     column-gap: 302px;
     padding: 61px 70px;
+  }
+
+  .footer-contacts__address-wrapper--grey {
+    background-color: #f2f2f2;
   }
 
   .footer-contacts__text {
@@ -129,11 +129,11 @@
   .footer-contacts {
     position: relative;
     background-color: #f2f2f2;
+    padding: 97px 0 105px;//индекс
   }
 
   .footer-contacts__address-wrapper {
     width: 565px;
-    /*position: absolute;*/
     background-color: #ffffff;
     column-gap: 87px;
     padding: 61px 78px 60px 80px;

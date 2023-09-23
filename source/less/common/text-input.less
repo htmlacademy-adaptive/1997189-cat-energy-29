@@ -4,6 +4,12 @@
   column-gap: 13px;
 }
 
+.text-input__input::-webkit-outer-spin-button,
+.text-input__input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
 .text-input__label {
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
@@ -26,11 +32,12 @@
 }
 
 .text-input__input {
+  appearance: textfield;
+  margin: 0;
   flex-grow: 1;
   height: 45px;
   border: 1px solid #e7e7e7;
-  padding: 0 44px 0 14px;
-  margin: 0;
+  padding: 0 44px 0 16px;
   color: #444444;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
@@ -71,24 +78,6 @@
   stroke: #ff8282;
 }
 
-/*.text-input__label--phone::after {
-  content: "";
-  display: block;
-  mask-image: url("../img/icons/sprite.svg#input-phone");
-  background-color: #000000;
-  mask-position: center;
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  right: 10px;
-  top: 25px;
-}
-
-.text-input__input:hover + .text-input__label--phone::after svg {
-  background-color: blue;
-  stroke: orange;
-}*/
-
 .text-input__input:invalid + .text-input__label--email::after {
   background-color: #ff8282;
 }
@@ -113,11 +102,11 @@
     font-size: 20px;
     line-height: 18px;
     height: 52px;
-    padding: 0 15px 0 19px;
+    padding: 0 45px 0 19px;
   }
 
   .text-input__svg {
     right: 14px;
-    top: 18px;
+    top: 15px;
   }
 }

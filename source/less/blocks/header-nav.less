@@ -7,10 +7,11 @@
   height: 24px;
   border: none;
   position: absolute;
-  right: 20px;
+  right: 21px;
   top: -36px;
   background-color: transparent;
   cursor: pointer;
+  display: none;
 }
 
 .header-nav--closed .header-nav__toggle::before {
@@ -29,6 +30,7 @@
   width: 24px;
   right: 17px;
   top: -40px;
+  display: block;
 
   &::before,
   &::after {
@@ -40,6 +42,7 @@
     position: absolute;
     left: 0;
     top: 50%;
+    box-shadow: none;
   }
 
   &::before {
@@ -56,8 +59,17 @@
     display: none;
   }
 
+  .header-nav--closed .header-nav__toggle {
+    display: block;
+  }
+
   .header-nav--opened .header-nav__list {
     display: block;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
   }
 }
 

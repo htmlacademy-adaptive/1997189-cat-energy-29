@@ -61,14 +61,13 @@
         <label class="text-input__label" for="weight">
           <span class="text-input__row">Вес&nbsp;(кг):*</span>
 
-        <input class="text-input__input" type="text" value="7" id="weight" name="input-weight" placeholder="Введите вес питомца" required>
+        <input class="text-input__input" type="number" value="7" id="weight" name="input-weight" placeholder="Введите вес питомца" required>
       </label>
       </li>
       <li class="form__item text-input group-name__item">
         <label class="text-input__label" for="age">
           <span class="text-input__row">Возраст&nbsp;(лет):</span>
-
-        <input class="text-input__input" type="text" value="7" id="age" name="input-age" placeholder="Введите возраст питомца" required>
+        <input class="text-input__input" type="number" value="7" id="age" name="input-age" placeholder="Введите возраст питомца" required>
       </label>
       </li>
     </ul>
@@ -94,7 +93,9 @@
 
   <fieldset class="form__group group-contact">
     <h2 class="group-contact__heading heading-extra">
+      <span class="heading-extra__wrapper">
       <span class="group-contact__text heading-extra__text">Контактные данные (владельца кота) </span>
+    </span>
     </h2>
 
     <ul class="form__list group-contact__list">
@@ -111,7 +112,7 @@
       <li class="form__item group-contact__item text-input">
         <label class="text-input__label text-input__label--phone" for="phone">
           <span class="text-input__row">Телефон:*</span>
-        <input class="text-input__input" id="phone" name="phone" type="text" value="8 (960) 900-60-90" required>
+        <input class="text-input__input" id="phone" name="phone" type="tel" value="8 (960) 900-60-90" required>
         <svg class="text-input__svg" width="20" height="20">
           <use xlink:href="img/icons/sprite.svg#input-phone">
           </use>
@@ -123,7 +124,9 @@
   </fieldset>
   <fieldset class="form__group group-comment">
     <h2 class="group-comment__heading heading-extra">
-      <span class="heading-extra__text">Комментарий</span>
+      <span class="heading-extra__wrapper">
+      <span class="group-comment__extra-text heading-extra__text">Комментарий</span>
+      </span>
     </h2>
     <div class="group-comment__text-wrapper">
 <textarea class="group-comment__text" name="comment" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
@@ -133,7 +136,9 @@
 
   <fieldset class="form__group group-additional">
     <h2 class="group-additional__heading heading-extra">
+      <span class="heading-extra__wrapper">
       <span class="group-additional__text heading-extra__text">Дополнительно</span>
+      </span>
     </h2>
     <ul class="form__list group-additional__list">
       <li class="form__item group-additional__item checkbox">
@@ -165,7 +170,7 @@
   <footer class="body__footer footer">
     <section class="footer__contacts footer-contacts">
       <h3 class="visually-hidden">Адрес интернет-магазина Кэт Энерджи.</h3>
-      <div class="footer-contacts__address-wrapper">
+      <div class="footer-contacts__address-wrapper footer-contacts__address-wrapper--grey">
         <p class="footer-contacts__text">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
         <address class="footer-contacts__address">ул. Большая
           Конюшенная, д. 19/8
