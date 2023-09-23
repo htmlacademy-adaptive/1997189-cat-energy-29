@@ -1,5 +1,5 @@
 .slider {
-  width: 280px;
+  width: 284px;
   height: 256px;
   position: relative;
   margin: 0 auto;
@@ -10,7 +10,7 @@
   margin: 0;
   list-style: none;
   width: 280px;
-  height: 256px;
+  height: 255px;
 }
 
 .slider__item {
@@ -31,7 +31,7 @@
 }
 
 .slider__item--before {
-  background: #eaeaea;
+  background-image: linear-gradient(#eaeaea 70px, #eaeaea 70px);
   z-index: 5;
   width: 50%;
   transition: all 2s;
@@ -76,7 +76,7 @@
   border-radius: 50%;
   border: 2px solid #666666;
   position: absolute;
-  left: 50%;
+  left: calc(50% - 2px);
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 20;
@@ -98,10 +98,9 @@
   content: "";
   position: absolute;
   width: 24px;
-    height: 20px;
-    top: 9px;
-    left: 6px;
-  //background: #ffffff;
+  height: 20px;
+  top: 9px;
+  left: 6px;
   mask-image: url("../img/icons/sprite.svg#triangles-slider");
   background-color: #666666;
   mask-repeat: no-repeat;
@@ -176,12 +175,21 @@
       background-size: 560px auto;
     }
   }
+
+  .slider__item--before {
+    background-image: linear-gradient(#ffffff 154px, #eaeaea 154px);
+  }
 }
 
 @media (min-width: @desktop-width) {
-  .slider {
+  .slider__wrapper {
+    background-image: none;
     position: absolute;
-    right: 29px;
     top: 2px;
+    right: 29px;
+  }
+
+  .slider__item--before {
+    background-image: linear-gradient(#ffffff 135px, #eaeaea 135px);
   }
 }

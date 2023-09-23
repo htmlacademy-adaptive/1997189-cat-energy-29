@@ -1,18 +1,25 @@
 .extra-item {
   border-top: 1px solid #cdcdcd;
-  padding: 13px 0 19px;
+  padding: 13px 0 13px;
 }
 
 .extra-item__list {
   padding: 0;
-  margin: 0 0 12px 0;
+  margin: 0 0 13px;
   display: flex;
+  column-gap: 15px;
   justify-content: space-between;
 }
 
 .extra-item__description {
   margin: 0;
   padding: 0;
+  width: 130px;
+  text-align: right;
+}
+
+.extra-item__definition {
+  width: 134px;
 }
 
 .extra-item:last-child {
@@ -36,22 +43,37 @@
   .extra-item__caption {
     font-size: 20px;
     line-height: 20px;
+    margin-bottom: 0;
   }
 
   .extra-item {
     border-left: 1px solid #cdcdcd;
     border-right: 1px solid #cdcdcd;
-    padding: 25px 37px 27px 37px;
+    padding: 27px 37px 23px;
     display: grid;
-    grid-template-columns: 1fr 236px;
-    row-gap: 14px;
+    grid-template-columns: 1fr 233px;
+    row-gap: 23px;
+    column-gap: 14px;
+  }
+
+  .extra-item__definition {
+    width: 140px;
+    text-align: right;
+  }
+
+
+  .extra-item__description {
+    width: 80px;
+    text-align: right;
+    padding-right: 3px;
   }
 
   .extra-item__list {
     justify-content: flex-end;
-    column-gap: 64px;
+    column-gap: 14px;
     font-size: 16px;
     line-height: 20px;
+    margin-bottom: 0;
   }
 }
 
@@ -59,7 +81,7 @@
   .extra-item {
     border-left: none;
     border-right: none;
-    padding: 13px 0 15px 0;
+    padding: 13px 0 13px 0;
     display: grid;
     grid-template-columns: 1fr 329px 245px;
     column-gap: 40px;
@@ -73,7 +95,17 @@
   .extra-item__list {
     grid-column: 2/3;
     justify-content: flex-end;
-    column-gap: 111px;
-    padding-top: 10px;
+    column-gap: 103px;
+    padding-top: 14px;
+  }
+
+  .extra-item__definition {
+    text-align: left;
+  }
+
+  .extra-item__description {
+    padding-right: unset;
+    width: 41px;
+    text-align: left;
   }
 }

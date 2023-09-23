@@ -1,5 +1,9 @@
 .products-extra__heading {
-  margin-bottom: 36px;
+  margin-bottom: 35px;
+}
+
+.products-extra__heading-text {
+  width: 266px;
 }
 
 .products-extra__wrapper {
@@ -9,13 +13,13 @@
 .products-extra__promotion {
   background-image: url("../img/promotion-background.jpg");
   background-repeat: no-repeat;
-  padding: 58px 20px 43px 20px;
+  padding: 58px 20px 34px;
   background-color: #68b738;
   background-size: cover;
+  margin-bottom: 10px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/promotion-background@2x.jpg");
-    /*background-size: 280px auto;*/
     background-size: cover;
   }
 }
@@ -25,7 +29,7 @@
   display: block;
   width: 78px;
   height: 80px;
-  background-image: url("../img/gift-icon.svg");
+  background-image: url("../img/icons/sprite.svg#gift-icon");
   background-repeat: no-repeat;
   background-position: center;
   margin: 0 auto 48px auto;
@@ -33,20 +37,19 @@
 
 .products-extra__text {
   padding: 0;
-  /*margin: 0;*/
   color: #ffffff;
   text-align: center;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-  /* margin-bottom: 35px;*/
   width: 182px;
   margin: 0 auto;
+  margin-bottom: 10px;
 }
 
 .products-extra__list {
-  margin-bottom: 33px;
+  margin-bottom: 34px;
 }
 
 @media (min-width: @tablet-width) {
@@ -55,7 +58,7 @@
   }
 
   .products-extra__list {
-    margin-bottom: 68px;
+    margin-bottom: 69px;
   }
 
   .products-extra__wrapper {
@@ -67,11 +70,10 @@
     justify-content: space-between;
     background-image: url("../img/promotion-background-tablet1x.jpg");
     background-size: cover;
-    padding: 58px 114px 63px 80px;
+    padding: 58px 114px 58px 79px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/promotion-background-tablet2x@2x.jpg");
-      /*background-size: 707px auto;*/
       background-size: cover;
     }
 
@@ -83,6 +85,11 @@
   .products-extra__text {
     margin: unset;
     text-align: left;
+    padding: 12px 10px;
+  }
+
+  .products-extra__heading-text {
+    width: 419px;
   }
 }
 
@@ -98,15 +105,14 @@
   .products-extra__promotion {
     width: 245px;
     flex-direction: column;
-    row-gap: 51px;
+    row-gap: 38px;
     justify-content: flex-start;
-    padding: 55px 19px 40px 19px;
+    padding: 55px 19px 29px;
     align-items: center;
     background-image: url("../img/promotion-background-desktop1x.jpg");
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/promotion-background-desktop2x@2x.jpg");
-      /*background-size: 245px auto;*//*Какой размер указывать*/
       background-size: cover;
     }
   }
@@ -118,5 +124,13 @@
 
   .products-extra__text {
     text-align: center;
+  }
+
+  .products-extra__heading {
+    margin-bottom: 81px;
+  }
+
+  .products-extra__heading-text {
+    width: 419px;
   }
 }

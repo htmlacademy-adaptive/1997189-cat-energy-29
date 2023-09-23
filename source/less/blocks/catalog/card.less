@@ -1,25 +1,19 @@
 .card {
-  /*padding: 19px 0 24px 0;*/
   border-bottom: 1px solid #ebebeb;
-  padding-top: 19px;
+  padding-top: 18px;
   padding-bottom: 25px;
-}
-
-.card--show-more {
-  padding-top: 78px;
 }
 
 .card__caption {
   margin: 0;
-  padding: 0;
   color: #222222;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
-  /*max-width: 127px;*/
   padding: 2px 62px 2px 0;
+  max-width: 152px;
 }
 
 .card__about,
@@ -30,7 +24,7 @@
   text-align: center;
   font-size: 12px;
   font-weight: 400;
-  line-height: 16px; /* 133.333% */
+  line-height: 16px;
 }
 
 .card__link {
@@ -39,22 +33,24 @@
   align-items: center;
   text-decoration: none;
   color: inherit;
-  /*width: 140px;
-  height: 112px;*/
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px; /* 125% */
-  /*padding: 10px;*/
+  line-height: 20px;
   width: 140px;
-  height: 112px;
+  height: 107px;
+  margin: 0 auto;
+
+  &:focus-visible {
+    outline-offset: -4px;
+  }
 }
 
 .card__caption-link {
   text-decoration: none;
   justify-content: flex-start;
   color: inherit;
-  margin-bottom: 14px;
+  margin-bottom: 13px;
   display: block;
 }
 
@@ -65,7 +61,8 @@
 
 .card__about {
   display: flex;
-  justify-content: space-between;
+  column-gap: 21px;
+  max-width: 140px;
 }
 
 .card__wrapper {
@@ -73,9 +70,9 @@
 }
 
 .card__wrapper--grid {
-  grid-template-columns: 140px 1fr;
+  grid-template-columns: 1fr 1fr;
   display: grid;
-  row-gap: 12px;
+  row-gap: 18px;
 }
 
 .card__catalog-link {
@@ -84,77 +81,78 @@
 }
 
 
+.card__definition {
+  width: 45%;
+  text-align: right;
+}
+
+.card__description {
+  width: 45%;
+  text-align: left;
+}
+
+
 @media (min-width: @tablet-width) {
   .card {
     border-bottom: none;
     padding-top: 0;
-    padding-bottom: 39px;
+    padding-bottom: 34px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: calc(100% - 71px);
+      background-color: #f2f2f2;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  .card__image {
+    margin-top: -3px;
   }
 
   .card__link {
     align-items: start;
-    height: 200px;
-    margin: 0 auto;
-    margin-bottom: 33px;
+    width: 200px;
+    height: 210px;
+    margin: 0 auto 17px;
   }
 
   .card__caption {
     text-align: center;
     font-size: 20px;
     line-height: 24px;
-    padding: 3px 44px;
+    padding: 3px 46px;
+    max-width: 250px;
+    margin: 0 auto;
   }
 
   .card__wrapper--grid {
     row-gap: 0;
+    grid-template-rows: auto 1fr auto;
+    height: 100%;
+  }
+
+  .card__definition {
+    margin-right: -4px;
   }
 
   .card__caption-link {
     margin-bottom: 18px;
   }
 
-  .card--before {
-    position: relative;
-  }
-
-  .card--before::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: calc(100% - 71px);
-    background-color: #f2f2f2;
-    bottom: 0;
-    left: 0;
-  }
-
-  .card--show-more {
-    position: relative;
-    padding-top: 72px;
-  }
-
   .card__wrapper {
     grid-template-columns: 1fr;
     position: relative;
     z-index: 1;
-    padding: 0 39px;
+    padding: 0 37px 0 37px;
   }
-
-  .card--show-more .card__wrapper {
-    padding-top: 161px;
-  }
-
-  .card--show-more::before {
-    content: "";
-    height: calc(100% - 71px);
-    position: absolute;
-    width: 100%;
-    background-color: #ffffff;
-    border: 2px solid #f2f2f2;
-  }
-
 
   .card__text-wrapper {
-    margin-bottom: 27px;
+    margin-bottom: 24px;
   }
 
   .card__about {
@@ -162,30 +160,66 @@
     padding-bottom: 8px;
     margin-bottom: 7px;
     font-size: 16px;
+    column-gap: 25px;
+    max-width: unset;
   }
 
   .card__definition,
   .card__description {
     font-size: 16px;
   }
+
+  .card__catalog-link {
+    margin-bottom: 5px;
+  }
 }
 
 @media (min-width: @desktop-width) {
-  .card--before::before,
+  .card--before::before {
+    height: calc(100% - 77px);
+  }
+
+  .card__catalog-link {
+    margin: 0 38px 5px;
+  }
+
+  .card--show-more {
+    padding-top: 77px;
+  }
+
   .card--show-more::before {
-    height: calc(100% - 80px);
+    height: calc(100% - 77px);
   }
 
   .card__caption {
-    padding: 0 15px;
     text-align: center;
   }
 
+  .card__caption-link {
+    margin-bottom: 22px;
+  }
+
   .card__link {
-    margin: 0 auto 41px;
+    margin: 0 auto 10px;
+    width: 219px;
+    padding-top: 3px;
+    padding-bottom: 2px;
   }
 
   .card {
-    padding-bottom: 41px;
+    padding-bottom: 35px;
+  }
+
+  .card__about {
+    margin: 0 40px 6px;
+    padding-bottom: 9px;
+  }
+
+  .card__wrapper {
+    padding: unset;
+  }
+
+  .card__text-wrapper {
+    margin-bottom: 29px;
   }
 }

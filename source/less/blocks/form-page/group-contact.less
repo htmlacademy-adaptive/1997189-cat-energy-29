@@ -1,10 +1,10 @@
 .group-contact {
   padding-top: 28px;
-  padding-bottom: 11px;
+  padding-bottom: 23px;
 }
 
 .group-contact__heading {
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 }
 
 .group-contact__list {
@@ -13,17 +13,21 @@
 }
 
 .group-contact__item {
-  margin-bottom: 15px;
+  margin-bottom: 2px;
+}
+
+.group-contact__text {
+  width: 227px;
 }
 
 @media (min-width: @tablet-width) {
   .group-contact {
-    padding-top: 55px;
-    padding-bottom: 46px;
+    padding-top: 44px;
+    padding-bottom: 43px;
   }
 
   .group-contact__heading {
-    margin-bottom: 75px;
+    margin-bottom: 77px;
   }
 
   .group-contact__list {
@@ -32,20 +36,30 @@
   }
 
   .group-contact__item {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
+  }
+
+  .group-contact__text {
+    width: 594px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .group-contact {
     padding-top: 70px;
+    padding-bottom: 46px;
   }
 
   .group-contact__list {
     display: flex;
+    flex-wrap: wrap;
     width: 1280px;
     margin: 0 auto;
     padding: 0 30px;
     column-gap: 80px;
+  }
+
+  .group-contact__item {
+    width: 570px;
   }
 }

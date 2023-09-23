@@ -5,13 +5,12 @@
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
-  padding-bottom: 25px;
+  padding-bottom: 21px;
 }
 
 .group-comment__heading {
-  margin-bottom: 35px;
+  margin-bottom: 39px;
 }
-
 
 .group-comment__text-wrapper {
   padding: 0 20px;
@@ -21,7 +20,6 @@
 .group-comment__text {
   border: 1px solid #e7e7e7;
   min-width: 280px;
-  /*margin: 0 20px 0 20px;*/
   color: #444444;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
@@ -29,14 +27,15 @@
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
-  padding: 16px 10px 15px 15px;
+  padding: 14px 10px 15px 15px;
   min-height: 150px;
   width: 100%;
+  resize: none;
 }
 
 @media (min-width: @tablet-width) {
   .group-comment {
-    padding-bottom: 52px;
+    padding-bottom: 62px;
   }
 
   .group-comment__heading {
@@ -54,11 +53,15 @@
     padding: 11px 10px 15px 20px;
     min-height: 175px;
   }
+
+  .group-comment__extra-text {
+    width: 262px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .group-comment {
-    padding-bottom: 65px;
+    padding-bottom: 70px;
   }
 
   .group-comment__text-wrapper {

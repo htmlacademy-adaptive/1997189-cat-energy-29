@@ -1,5 +1,5 @@
 .form-page__title {
-  margin-bottom: 39px;
+  margin-bottom: 38px;
   padding-top: 28px;
   padding-left: 20px;
   padding-right: 20px;
@@ -24,7 +24,7 @@
 }
 
 .form-page__text {
-  margin-bottom: 38px;
+  margin-bottom: 25px;
 }
 
 @media (min-width: @tablet-width) {
@@ -39,12 +39,16 @@
     margin-bottom: 65px;
   }
 
+  .form-page__form {
+    margin-bottom: unset;
+  }
+
   .form-page__wrapper {
     display: grid;
     padding: 0 70px;
     grid-template-columns: 283px 1fr;
-    margin-bottom: 52px;
-    column-gap: 64px;
+    padding-bottom: 41px;
+    column-gap: 60px;
   }
 
   .form-page__correction {
@@ -56,6 +60,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .form-page {
+    padding-bottom: 59px;
+  }
+
   .form-page__title {
     margin: 0 auto;
     width: 1280px;
@@ -84,5 +92,9 @@
   .form-page__text-wrapper {
     width: 390px;
     display: inline-block;
+  }
+
+  .form-page__correction {
+    padding-top: 17px;
   }
 }

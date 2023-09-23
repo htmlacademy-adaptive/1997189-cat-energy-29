@@ -1,12 +1,16 @@
 .header {
   position: relative;
-  padding: 58px 0 6px 0;
+  padding: 58px 0 7px 0;
   background: url("../img/footer-logo 2.svg") no-repeat 50% 22px;
+}
+
+.header__container {
+  position: relative;
 }
 
 .header__logo {
   position: absolute;
-  top: 12px;
+  top: -44px;
   left: 20px;
 }
 
@@ -17,8 +21,10 @@
   }
 
   .header__logo {
-    top: 27px;
-    left: 30px;
+    top: 9px;
+    left: -228px;
+    width: 174px;
+    height: 54px;
   }
 
   .header-nav__list {
@@ -28,21 +34,19 @@
 
 @media (min-width: @desktop-width) {
   .header {
-    /*width: 1440px;*/
-    /*padding: 52px 110px 52px 110px;*/
     padding: 0;
   }
 
   .header__logo {
-    top: 56px;
-    left: 110px;
+    top: 55px;
+    left: 30px;
+    width: 205px;
+    height: 64px;
   }
 
   .header__container {
-    /*padding-left: 50%;*/
-    /*width: 1440px;*/
     margin: 0 auto;
-    /*padding-left: 50%;*/
+    width: 1280px;
   }
 
   .header__nav {

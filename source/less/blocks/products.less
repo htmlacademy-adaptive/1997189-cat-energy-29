@@ -5,6 +5,7 @@
 .products__text {
   padding: 0;
   margin: 0;
+  line-height: 19px;
 }
 
 .products__item {
@@ -45,9 +46,7 @@
 @media (min-width: @tablet-width) {
   .products {
     display: grid;
-    /* grid-template-columns: 250px 250px;*/
     grid-template-columns: 1fr 1fr;
-    /* column-gap: 50px;*/
     counter-reset: section;
     column-gap: 59px;
     row-gap: 37px;
@@ -96,7 +95,6 @@
 
 @media (min-width: @desktop-width) {
   .products {
-    /*grid-template-columns: 250px 250px 250px 250px;*/
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
   }
@@ -113,5 +111,9 @@
 
   .products__item--ingredients::after {
     right: 21px;
+  }
+
+  .products__text {
+    max-width: unset;
   }
 }

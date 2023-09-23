@@ -72,7 +72,7 @@ const svg = () => {
   .pipe(gulp.dest('build/img'));
 };
 
-const sprite = () => {
+/*const sprite = () => {
   return gulp.src ('source/img/iconsSprite/*.svg')
   .pipe(svgo())
   .pipe(svgstore ({
@@ -80,7 +80,7 @@ const sprite = () => {
   }))
   .pipe(rename('sprite.svg'))
   .pipe(gulp.dest('build/img/iconsSprite'));
-};
+};*/
 
 //шрифты, манифест
 export const copy = (done) => {
@@ -138,6 +138,7 @@ const server = (done) => {
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
   gulp.watch("source/js/script.js", gulp.series(scripts));
+  gulp.watch("source/js/*.js", gulp.series(scripts, reload));
   gulp.watch("source/*.html", gulp.series(html, reload));
   };
 
@@ -151,11 +152,13 @@ export const build = gulp.series(
     html,
     scripts,
     svg,
-    sprite,
     makeStack,
     createWebp
-  )
-);
+  ),
+  gulp.series(
+    server,
+    watcher
+));
 
 export default gulp.series(
   clean,
@@ -167,7 +170,6 @@ export default gulp.series(
     html,
     scripts,
     svg,
-    sprite,
     makeStack,
     createWebp
   ),

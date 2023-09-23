@@ -2,14 +2,13 @@
 
 .promo__wrapper {
   display: grid;
-  padding: 27px 0 0 0; /* проверь 6 px! 27px 0 6px 0;*/
+  padding: 27px 0 0 0;
 
   &::after {
     content: "";
     display: block;
     width: 100%;
-    min-height: 275px;
-    /*высота картинки... убрать?*/
+    min-height: 276px;
     background-image: url("../img/can-mobile.png");
     background-repeat: no-repeat;
     background-position: center center;
@@ -25,7 +24,8 @@
   margin: 0 20px;
   display: block;
   grid-row: 4/5;
-  padding: 10px 8px 11px 8px;
+  padding: 10px 8px 10px 8px;
+  font-size: 16px;
 }
 
 .promo__heading {
@@ -42,6 +42,7 @@
   background-size: 100%;
   padding-left: 10px;
   padding-right: 10px;
+  width: 300px;
 }
 
 .promo__slogan {
@@ -55,8 +56,9 @@
   text-align: center;
   position: relative;
   z-index: 2;
-  min-height: 42px;
-  margin: 0;
+  min-height: 40px;
+  width: 300px;
+  margin: 0 auto;
 }
 
 .promo__button-wrapper {
@@ -94,31 +96,32 @@
     line-height: 60px;
     text-align: left;
     min-height: 136px;
-    margin: 0 0 25px 0;
-    padding-left: 89px;
-    padding-right: 42px;
+    width: 529px;
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 25px;
   }
 
   .promo__slogan {
     color: #000000;
     font-size: 20px;
     line-height: 20px;
+    margin: 0 auto;
     text-align: left;
     min-height: 26px;
-    padding-left: 90px;
-    padding-right: 90px;
+    width: 529px;
+    margin-bottom: 14px;
   }
 
   .promo__wrapper {
-    /*position: static;*/
-    /*padding: 38px 30px 13px 89px;*/
-    padding-top: 37px;
+    padding-top: 36px;
+    width: 623px;
+    margin: 0 auto;
   }
 
   .promo__wrapper::after {
     background-image: url("../img/can-tablet.png");
     min-height: 609px;
-    background-position: left 0 top 13px;
     grid-column: 1/-1;
     grid-row: 3/5;
     margin: 0 auto;
@@ -132,9 +135,9 @@
   .promo__button {
     grid-column-start: 1;
     grid-row-start: 3;
-    margin: 45px 0 0 91px;
-    padding: 16px 10px;
-    width: 245px;
+    margin: 29px 0 0 47px;
+    padding: 17px 10px;
+    width: 244px;
     font-size: 20px;
     line-height: 20px;
     align-self: flex-start;
@@ -146,8 +149,6 @@
   .promo__wrapper {
     grid-template-columns: 510px 522px;
     grid-template-rows: 55px minmax(161px, auto) minmax(27px, auto) auto;
-    /*max-width: 1440px;
-    padding: 6px 110px 0 160px;*/
     margin: 0 auto;
     width: 1280px;
     padding-left: 30px;
@@ -157,10 +158,9 @@
   }
 
   .promo__container {
-    /*width: 1280px;*//*нарушает кота!*/
     margin: 0 auto;
     padding-left: 0;
-    padding-right: 0; /*обнулили паддинг таблет, возможно, нужно вернуть*/
+    padding-right: 0;
   }
 
   .promo__wrapper::after {
@@ -169,8 +169,8 @@
     grid-row: 1/5;
     position: absolute;
     z-index: 4;
-    left: -63px;
-    top: -31px;
+    left: -48px;
+    top: -73px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/can-desktop@2x.png");
@@ -182,7 +182,7 @@
     grid-column: 1/2;
     grid-row: 2/3;
     padding-top: 10px;
-    padding-bottom: 40px;
+    padding-bottom: 39px;
     padding-left: 80px;
     padding-right: 10px;
     margin-bottom: 0;
@@ -198,7 +198,7 @@
   .promo__button {
     grid-column: 1/2;
     grid-row: 4/5;
-    margin-left: 78px;
+    margin: 32px 0 0 79px;
   }
 
   .promo {
@@ -213,14 +213,13 @@
     right: 0;
     top: -122px;
     background: url("../img/cat-background-desktop.jpg") no-repeat right top;
-    background-size: cover; /*было cover*/
+    background-size: cover;
     z-index: -1;
   }
 
   @media (min-resolution: 2dppx) {
     .promo__container--green-theme::before {
       background-image: url("../img/cat-background-desktop@2x.jpg");
-      background-size: 1041px auto;
     }
   }
 }
