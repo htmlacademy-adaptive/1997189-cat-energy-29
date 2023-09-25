@@ -37,10 +37,13 @@
   left: calc(50% - 15px);
 }
 
-.catalog-list__link-more:focus-visible::after, /*не работает*/
-.catalog-list__link-more:focus-visible::before {
+.catalog-list__link-more:focus-visible {
   outline: none;
   border: none;
+}
+
+.catalog-list__link-more:focus-visible .catalog-list__link-caption {
+  color: #68b738;
 }
 
 .catalog-list__link-more::before {

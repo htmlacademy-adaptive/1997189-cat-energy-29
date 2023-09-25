@@ -155,10 +155,7 @@ export const build = gulp.series(
     makeStack,
     createWebp
   ),
-  gulp.series(
-    server,
-    watcher
-));
+  );
 
 export default gulp.series(
   clean,
