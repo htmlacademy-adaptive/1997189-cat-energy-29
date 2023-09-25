@@ -61,6 +61,18 @@
   opacity: 0.3;
 }
 
+.radio__input:active + .radio__label::before {
+  border-color: rgba(186, 186, 186, 0.6);
+}
+
+.radio__input:active + .radio__label {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.radio__input:checked:active + .radio__label::after {
+  opacity: 0.6;
+}
+
 @media (min-width: @tablet-width) {
   .radio__label {
     font-size: 20px;
